@@ -1,3 +1,9 @@
+.btn {
+  transition: transform 0.3s;
+  &:hover {
+    transform: scale(1.05);
+  }
+}
 .icon--small {
   width: 1.6rem;
   height: 1.6rem;

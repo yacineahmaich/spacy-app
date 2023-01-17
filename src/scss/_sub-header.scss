@@ -40,10 +40,6 @@
       $color-primary
     );
     cursor: pointer;
-    transition: transform 0.3s;
-    &:hover {
-      transform: scale(1.05);
-    }
 
     &-icon {
       margin: 0.5rem;
