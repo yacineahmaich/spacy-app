@@ -18,13 +18,29 @@
       <img src="src/img/logo.svg" class="header__logo" alt="Logo">
       <nav class="nav">
         <ul class="nav__list">
-          <li class="nav__item">
-            <button class="nav__btn">
+          <li class="nav__item nav__item--bookmarks">
+            <button class="nav__btn nav__btn--bookmarks">
               <svg class="nav__icon nav__icon--bookmarks">
                 <use href="src/img/icons.svg#icon-bookmark"></use>
               </svg>
               <span class="nav__btn-text">bookmarks</span>
             </button>
+            <!-- Bookmarks -->
+            <ul class="bookmarks">
+              <li class="bookmark">
+                <div class="bookmark__img">
+                  <img src="src/img/demo-recipe.jpg" alt="recipe">
+                </div>
+                <h4 class="bookmark__title">Pasta with Garlic, Scallions, Cauliflower & Breadcrumbs</h4>
+
+                <button class="bookmark__btn bookmark__btn--remove">
+                  <svg class="icon--small">
+                    <use href="src/img/icons.svg#icon-remove"></use>
+                  </svg>
+                </button>
+
+              </li>
+            </ul>
           </li>
         </ul>
       </nav>

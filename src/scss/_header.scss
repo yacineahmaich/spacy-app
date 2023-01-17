@@ -26,6 +26,14 @@
   &__item {
     height: 100%;
     position: relative;
+
+    // BOOKMARKS ITEM
+    &--bookmarks {
+      &:hover .bookmarks {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
   }
 
   &__icon {
@@ -35,6 +43,7 @@
   }
 
   &__btn {
+    position: relative;
     height: 100%;
     display: flex;
     align-items: center;
