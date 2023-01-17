@@ -128,7 +128,7 @@
 
     <!-- Pagination -->
     <div class="pagination">
-      <button class="pagination__btn pagination__btn--prev">
+      <button class="pagination__btn pagination__btn--prev pagination__btn-disabled">
         <svg class="icon--small">
           <use href="src/img/icons.svg#icon-arrow-left"></use>
         </svg>
@@ -136,11 +136,11 @@
       </button>
 
       <div class="pagination__pages">
-        <span class="pagination__pages--active">1</span>
-        <span>2</span>
-        <span>3</span>
-        <span>4</span>
-        <span>5</span>
+        <button class="pagination__pages-page pagination__pages-page--active">1</button>
+        <button class="pagination__pages-page">2</button>
+        <button class="pagination__pages-page">3</button>
+        <button class="pagination__pages-page">4</button>
+        <button class="pagination__pages-page">5</button>
       </div>
 
       <button class="pagination__btn pagination__btn--next">
