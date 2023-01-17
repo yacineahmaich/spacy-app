@@ -1,0 +1,55 @@
+.controls {
+  width: 100%;
+  padding: 1rem 5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: $mb-3;
+
+  &__founded {
+    display: flex;
+    align-items: center;
+    font-size: 1.7rem;
+
+    &-dot {
+      width: 1.5rem;
+      height: 1.5rem;
+      border-radius: 50%;
+      background-color: $color-primary-dark;
+    }
+
+    &--value {
+      font-weight: 600;
+      margin-left: 1rem;
+      margin-right: 0.5rem;
+    }
+  }
+
+  &__sort {
+    display: flex;
+    align-items: center;
+
+    &-icon {
+      margin-right: 0.5rem;
+      fill: $color-border;
+    }
+
+    &-btn {
+      padding: 1rem 1.5rem;
+      font-size: 1.5rem;
+      text-transform: capitalize;
+      font-weight: 400;
+      border: none;
+      border-radius: 5px;
+      background-color: $color-border;
+      color: $color-text-dark;
+      cursor: pointer;
+      transition: all 0.3s;
+
+      &:hover {
+        background-color: $color-primary;
+        color: #fff;
+      }
+    }
+  }
+}

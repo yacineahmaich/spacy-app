@@ -1,0 +1,17 @@
+{
+  "name": "spacy",
+  "version": "1.0.0",
+  "description": "",
+  "author": "Yacine Ahmaich",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "parcel-bundler": "^1.12.5"
+  },
+  "devDependencies": {
+    "sass": "^1.57.1"
+  }
+}

@@ -1,0 +1,51 @@
+.pagination {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  padding: 2rem 0;
+  margin-bottom: $mb-3;
+
+  &__pages {
+    display: flex;
+    gap: 2rem;
+
+    span {
+      font-size: 1.6rem;
+      font-weight: 600;
+      cursor: pointer;
+      color: $color-text-dark;
+    }
+
+    &--active {
+      color: $color-primary-light !important;
+    }
+  }
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    border: none;
+    background-color: $color-primary;
+    padding: 0.5rem 1.5rem;
+    border-radius: 40px;
+    cursor: pointer;
+
+    svg {
+      box-sizing: content-box;
+      fill: $color-primary;
+      background-color: #fff;
+      border-radius: 50%;
+      padding: 0.4rem;
+    }
+
+    span {
+      color: #fff;
+      text-transform: capitalize;
+      font-size: 1.4rem;
+      font-weight: 400;
+    }
+  }
+}

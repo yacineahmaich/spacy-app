@@ -1,0 +1,97 @@
+.recipes-wrapper {
+  width: 100%;
+  min-height: 70rem;
+}
+
+.recipes {
+  width: 100%;
+  padding: 0 5rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem;
+  margin-bottom: $mb-3;
+
+  @media (max-width: 600px) {
+    .recipe {
+      flex-direction: column;
+      &__img {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+      }
+      &__info {
+        gap: 1rem;
+      }
+    }
+  }
+}
+
+.recipe {
+  display: flex;
+  background-color: #fff;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.3s;
+
+  // Recipe hover animation
+  &:hover &__img img {
+    transform: scale(1.1);
+  }
+  &:hover &__img::before {
+    opacity: 0;
+  }
+  //////////////////////////
+
+  &__img {
+    position: relative;
+    height: 12rem;
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background-color: $color-primary-very-light;
+      z-index: 9;
+      transition: opacity 0.3s;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: all 0.3s;
+      transform-origin: center;
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2rem;
+
+    &-title {
+      font-size: 1.6rem;
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-line-clamp: 2; /* number of lines to show */
+      line-clamp: 2;
+      -webkit-box-orient: vertical;
+    }
+
+    &-author {
+      text-align: end;
+      color: $color-primary-dark;
+      font-size: 1.4rem;
+      font-weight: 500;
+    }
+  }
+}
