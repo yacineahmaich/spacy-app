@@ -12,7 +12,6 @@
 
 <body>
   <div class="container">
-
     <!-- Header -->
     <header class="header">
       <img src="src/img/logo.svg" class="header__logo" alt="Logo">
@@ -64,7 +63,7 @@
         <svg class="icon--small quick-search__icon">
           <use href="src/img/icons.svg#icon-sort"></use>
         </svg>
-        <button class="quick-search__btn">search by</button>
+        <button class="quick-search__btn">quick search</button>
       </div>
     </div>
 
@@ -95,20 +94,26 @@
             <label class="sort__item-content">
               <svg class="icon--small">
                 <use href="src/img/icons.svg#icon-price"></use>
-              </svg>default</label>
+              </svg>
+              default
+            </label>
           </li>
           <li class="sort__item">
 
             <label class="sort__item-content">
               <svg class="icon--small">
                 <use href="src/img/icons.svg#icon-time"></use>
-              </svg>price</label>
+              </svg>
+              price
+            </label>
           </li>
           <li class="sort__item">
             <label class="sort__item-content">
               <svg class="icon--small">
                 <use href="src/img/icons.svg#icon-health"></use>
-              </svg>health score</label>
+              </svg>
+              health score
+            </label>
           </li>
         </ul>
       </div>
@@ -171,8 +176,8 @@
       </button>
 
       <div class="pagination__pages">
-        <button class="pagination__pages-page pagination__pages-page--active">1</button>
-        <button class="pagination__pages-page">2</button>
+        <button class="pagination__pages-page">1</button>
+        <button class="pagination__pages-page pagination__pages-page--active">2</button>
         <button class="pagination__pages-page">3</button>
         <button class="pagination__pages-page">4</button>
         <button class="pagination__pages-page">5</button>
@@ -217,9 +222,32 @@
         </li>
       </ul>
     </footer>
-
-
   </div>
+
+  <!-- Modal -->
+  <!-- <div>
+    <div class="overlay"></div>
+    <div class="popup">
+      <button class="popup__btn popup__btn--close">
+        <svg class="icon--small">
+          <use href="src/img/icons.svg#icon-close">
+          </use>
+        </svg>
+      </button>
+      <div class="search-menu">
+        <h2 class="search-menu__title">Search for your wish</h2>
+
+        <div class="search-menu__items">
+
+          <div class="search-menu__item">
+            <span>popularity</span>
+          </div>
+
+        </div>
+
+      </div>
+    </div> <!--- /popup --->
+  <!---</div> -->
 
 </body>
 

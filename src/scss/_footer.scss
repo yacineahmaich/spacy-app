@@ -46,8 +46,8 @@
       &:hover {
         background-color: $color-text-light;
       }
-      &:hover a img {
-        transform: scale(0.9);
+      &:hover a svg {
+        transform: scale(1.3);
       }
 
       a {
@@ -63,7 +63,7 @@
           padding: 0.5rem;
         }
 
-        img {
+        svg {
           transition: all 0.3s;
         }
       }
