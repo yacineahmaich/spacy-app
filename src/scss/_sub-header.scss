@@ -6,6 +6,19 @@
   align-items: center;
   justify-content: space-between;
   margin-bottom: $mb-3;
+
+  @media (max-width: 532px) {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+
+    .search {
+      width: 100%;
+      &__field {
+        width: 100%;
+      }
+    }
+  }
 }
 
 .search {
@@ -51,6 +64,34 @@
       font-size: 1.7rem;
       text-transform: capitalize;
       font-weight: 400;
+    }
+  }
+}
+
+.quick-search {
+  display: flex;
+  align-items: center;
+
+  &__icon {
+    margin-right: 0.5rem;
+    fill: $color-border;
+  }
+
+  &__btn {
+    padding: 1rem 1.5rem;
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    font-weight: 400;
+    border: none;
+    border-radius: 5px;
+    background-color: $color-border;
+    color: $color-text-dark;
+    cursor: pointer;
+    transition: all 0.3s;
+
+    &:hover {
+      background-color: $color-primary;
+      color: #fff;
     }
   }
 }

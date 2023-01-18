@@ -59,6 +59,13 @@
           <span class="search__btn-text">search</span>
         </button>
       </form>
+
+      <div class="quick-search">
+        <svg class="icon--small quick-search__icon">
+          <use href="src/img/icons.svg#icon-sort"></use>
+        </svg>
+        <button class="quick-search__btn">search by</button>
+      </div>
     </div>
 
 
@@ -71,11 +78,39 @@
         Recipes founded
       </div>
 
-      <div class="controls__sort">
-        <svg class="icon--small controls__sort-icon">
-          <use href="src/img/icons.svg#icon-sort"></use>
-        </svg>
-        <button class="controls__sort-btn">search by</button>
+      <div class="sort">
+        <button class="sort__btn">
+          <svg class="icon--small">
+            <use href="src/img/icons.svg#icon-default"></use>
+          </svg>
+          <label>default</label>
+          <svg class="icon--small sort__btn-icon">
+            <use href="src/img/icons.svg#icon-down"></use>
+          </svg>
+        </button>
+
+        <ul class="sort__list">
+          <li class="sort__item">
+
+            <label class="sort__item-content">
+              <svg class="icon--small">
+                <use href="src/img/icons.svg#icon-price"></use>
+              </svg>default</label>
+          </li>
+          <li class="sort__item">
+
+            <label class="sort__item-content">
+              <svg class="icon--small">
+                <use href="src/img/icons.svg#icon-time"></use>
+              </svg>price</label>
+          </li>
+          <li class="sort__item">
+            <label class="sort__item-content">
+              <svg class="icon--small">
+                <use href="src/img/icons.svg#icon-health"></use>
+              </svg>health score</label>
+          </li>
+        </ul>
       </div>
     </div>
 

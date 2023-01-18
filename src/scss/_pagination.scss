@@ -11,6 +11,10 @@
     display: flex;
     gap: 2rem;
 
+    @media (max-width: 500px) {
+      gap: 1rem;
+    }
+
     &-page {
       font-size: 1.6rem;
       width: 3.5rem;
