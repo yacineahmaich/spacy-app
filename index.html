@@ -67,57 +67,135 @@
         </svg>
         <button class="quick-search__btn">quick search</button>
       </div>
+
+      <!-- Modal -->
+      <div class="overlay hidden"></div>
+      <div class="modal hidden">
+        <button class="modal__btn modal__btn--close">
+          <svg class="icon--small">
+            <use href="src/img/icons.svg#icon-close">
+            </use>
+          </svg>
+        </button>
+        <div class="search-menu">
+          <h2 class="search-menu__title">Search for your wish</h2>
+
+          <ul class="search-menu__items">
+
+            <li class="search-menu__item">
+              <span>meta-score</span>
+            </li>
+            <li class="search-menu__item">
+              <span>popularity</span>
+            </li>
+            <li class="search-menu__item">
+              <span>healthiness</span>
+            </li>
+            <li class="search-menu__item">
+              <span>price</span>
+            </li>
+            <li class="search-menu__item">
+              <span>time</span>
+            </li>
+            <li class="search-menu__item">
+              <span>alcohol</span>
+            </li>
+            <li class="search-menu__item">
+              <span>caffeine</span>
+            </li>
+            <li class="search-menu__item">
+              <span>copper</span>
+            </li>
+            <li class="search-menu__item">
+              <span>energy</span>
+            </li>
+            <li class="search-menu__item">
+              <span>calories</span>
+            </li>
+            <li class="search-menu__item">
+              <span>calcium</span>
+            </li>
+            <li class="search-menu__item">
+              <span>carbohydrates</span>
+            </li>
+            <li class="search-menu__item">
+              <span>carbs</span>
+            </li>
+            <li class="search-menu__item">
+              <span>choline</span>
+            </li>
+            <li class="search-menu__item">
+              <span>cholesterol</span>
+            </li>
+            <li class="search-menu__item">
+              <span>total-fat</span>
+            </li>
+            <li class="search-menu__item">
+              <span>fluoride</span>
+            </li>
+            <li class="search-menu__item">
+              <span>trans-fat</span>
+            </li>
+            <li class="search-menu__item">
+              <span>saturated-fat</span>
+            </li>
+            <li class="search-menu__item">
+              <span>fiber</span>
+            </li>
+            <li class="search-menu__item">
+              <span>iron</span>
+            </li>
+            <li class="search-menu__item">
+              <span>magnesium</span>
+            </li>
+            <li class="search-menu__item">
+              <span>phosphorus</span>
+            </li>
+            <li class="search-menu__item">
+              <span>potassium</span>
+            </li>
+            <li class="search-menu__item">
+              <span>protein</span>
+            </li>
+            <li class="search-menu__item">
+              <span>selenium</span>
+            </li>
+            <li class="search-menu__item">
+              <span>sodium</span>
+            </li>
+            <li class="search-menu__item">
+              <span>thiamin</span>
+            </li>
+            <li class="search-menu__item">
+              <span>vitamin-a</span>
+            </li>
+            <li class="search-menu__item">
+              <span>sugar</span>
+            </li>
+            <li class="search-menu__item">
+              <span>zinc</span>
+            </li>
+
+          </ul>
+
+        </div>
+      </div> <!--- /popup --->
     </div>
 
 
 
     <!-- Controlls -->
     <div class="controls">
-      <div class="controls__founded">
+      <!-- <div class="controls__founded">
         <div class="controls__founded-dot"></div>
         <span class="controls__founded--value">98</span>
         Recipes founded
-      </div>
+      </div> -->
 
-      <div class="sort">
-        <button class="sort__btn">
-          <svg class="icon--small">
-            <use href="src/img/icons.svg#icon-default"></use>
-          </svg>
-          <label>default</label>
-          <svg class="icon--small sort__btn-icon">
-            <use href="src/img/icons.svg#icon-down"></use>
-          </svg>
-        </button>
-
-        <ul class="sort__list">
-          <li class="sort__item">
-
-            <label class="sort__item-content">
-              <svg class="icon--small">
-                <use href="src/img/icons.svg#icon-price"></use>
-              </svg>
-              <span>cocking time</span>
-            </label>
-          </li>
-          <li class="sort__item">
-
-            <label class="sort__item-content">
-              <svg class="icon--small">
-                <use href="src/img/icons.svg#icon-time"></use>
-              </svg>
-              <span>price</span>
-            </label>
-          </li>
-          <li class="sort__item">
-            <label class="sort__item-content">
-              <svg class="icon--small">
-                <use href="src/img/icons.svg#icon-health"></use>
-              </svg>
-              <span>health score</span>
-            </label>
-          </li>
-        </ul>
+      <div class="controls__founded">
+        <div class="controls__founded-dot"></div>
+        <span class="controls__founded--value"></span>
+        Recommanded For You
       </div>
     </div>
 
@@ -136,33 +214,6 @@
             <p class="recipe__info-author">Foodista</p>
           </div>
         </div>
-        <div class="recipe">
-          <div class="recipe__img">
-            <img src="src/img/demo-recipe.jpg" alt="demo recipe">
-          </div>
-          <div class="recipe__info">
-            <h2 class="recipe__info-title">Pasta with Garlic, Scallions, Cauliflower & Breadcrumbs</h2>
-            <p class="recipe__info-author">Foodista</p>
-          </div>
-        </div>
-        <div class="recipe">
-          <div class="recipe__img">
-            <img src="src/img/demo-recipe.jpg" alt="demo recipe">
-          </div>
-          <div class="recipe__info">
-            <h2 class="recipe__info-title">Pasta with Garlic, Scallions, Cauliflower & Breadcrumbs</h2>
-            <p class="recipe__info-author">Foodista</p>
-          </div>
-        </div>
-        <div class="recipe">
-          <div class="recipe__img">
-            <img src="src/img/demo-recipe.jpg" alt="demo recipe">
-          </div>
-          <div class="recipe__info">
-            <h2 class="recipe__info-title">Pasta with Garlic, Scallions, Cauliflower & Breadcrumbs</h2>
-            <p class="recipe__info-author">Foodista</p>
-          </div>
-        </div>
       </div>
 
     </div>
@@ -170,7 +221,7 @@
 
     <!-- Pagination -->
     <div class="pagination">
-      <button class="pagination__btn pagination__btn--prev pagination__btn-disabled">
+      <button class="pagination__btn pagination__btn--prev">
         <svg class="icon--small">
           <use href="src/img/icons.svg#icon-arrow-left"></use>
         </svg>
@@ -178,11 +229,7 @@
       </button>
 
       <div class="pagination__pages">
-        <button class="pagination__pages-page">1</button>
-        <button class="pagination__pages-page pagination__pages-page--active">2</button>
-        <button class="pagination__pages-page">3</button>
-        <button class="pagination__pages-page">4</button>
-        <button class="pagination__pages-page">5</button>
+        <span>6</span>
       </div>
 
       <button class="pagination__btn pagination__btn--next">
@@ -226,120 +273,7 @@
     </footer>
   </div>
 
-  <!-- Modal -->
-  <div>
-    <div class="overlay hidden"></div>
-    <div class="popup hidden">
-      <button class="popup__btn popup__btn--close">
-        <svg class="icon--small">
-          <use href="src/img/icons.svg#icon-close">
-          </use>
-        </svg>
-      </button>
-      <div class="search-menu">
-        <h2 class="search-menu__title">Search for your wish</h2>
 
-        <ul class="search-menu__items">
-
-          <li class="search-menu__item">
-            <span>meta-score</span>
-          </li>
-          <li class="search-menu__item">
-            <span>popularity</span>
-          </li>
-          <li class="search-menu__item">
-            <span>healthiness</span>
-          </li>
-          <li class="search-menu__item">
-            <span>price</span>
-          </li>
-          <li class="search-menu__item">
-            <span>time</span>
-          </li>
-          <li class="search-menu__item">
-            <span>alcohol</span>
-          </li>
-          <li class="search-menu__item">
-            <span>caffeine</span>
-          </li>
-          <li class="search-menu__item">
-            <span>copper</span>
-          </li>
-          <li class="search-menu__item">
-            <span>energy</span>
-          </li>
-          <li class="search-menu__item">
-            <span>calories</span>
-          </li>
-          <li class="search-menu__item">
-            <span>calcium</span>
-          </li>
-          <li class="search-menu__item">
-            <span>carbohydrates</span>
-          </li>
-          <li class="search-menu__item">
-            <span>carbs</span>
-          </li>
-          <li class="search-menu__item">
-            <span>choline</span>
-          </li>
-          <li class="search-menu__item">
-            <span>cholesterol</span>
-          </li>
-          <li class="search-menu__item">
-            <span>total-fat</span>
-          </li>
-          <li class="search-menu__item">
-            <span>fluoride</span>
-          </li>
-          <li class="search-menu__item">
-            <span>trans-fat</span>
-          </li>
-          <li class="search-menu__item">
-            <span>saturated-fat</span>
-          </li>
-          <li class="search-menu__item">
-            <span>fiber</span>
-          </li>
-          <li class="search-menu__item">
-            <span>iron</span>
-          </li>
-          <li class="search-menu__item">
-            <span>magnesium</span>
-          </li>
-          <li class="search-menu__item">
-            <span>phosphorus</span>
-          </li>
-          <li class="search-menu__item">
-            <span>potassium</span>
-          </li>
-          <li class="search-menu__item">
-            <span>protein</span>
-          </li>
-          <li class="search-menu__item">
-            <span>selenium</span>
-          </li>
-          <li class="search-menu__item">
-            <span>sodium</span>
-          </li>
-          <li class="search-menu__item">
-            <span>thiamin</span>
-          </li>
-          <li class="search-menu__item">
-            <span>vitamin-a</span>
-          </li>
-          <li class="search-menu__item">
-            <span>sugar</span>
-          </li>
-          <li class="search-menu__item">
-            <span>zinc</span>
-          </li>
-
-        </ul>
-
-      </div>
-    </div> <!--- /popup --->
-  </div>
 
 </body>
 

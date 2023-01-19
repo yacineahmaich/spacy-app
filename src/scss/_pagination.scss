@@ -3,40 +3,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 2rem;
+  gap: 3.5rem;
   padding: 2rem 0;
   margin-bottom: $mb-3;
 
   &__pages {
-    display: flex;
-    gap: 1rem;
-
-    @media (max-width: 500px) {
-      gap: 0.6rem;
-    }
-
-    &-page {
-      font-size: 1.6rem;
-      width: 3rem;
-      height: 3rem;
-      border: none;
-      outline: none;
-      background-color: transparent;
-      color: #444;
-      border-radius: 50%;
-      cursor: pointer;
-      transition: all 0.4s;
-
-      &:hover {
-        background-color: #444;
-        color: #fff;
-      }
-
-      &--active {
-        background-color: #444;
-        color: #fff;
-      }
-    }
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: $color-text-dark;
   }
 
   &__btn {
@@ -50,25 +24,7 @@
     cursor: pointer;
     transition: all 0.3s;
 
-    &:not(&-disabled):hover {
-      background-color: $color-primary-dark;
-    }
-    &:not(&-disabled):hover svg {
-      fill: $color-primary-dark;
-    }
-
-    &--next:not(&-disabled):hover {
-      transform: translateX(0.2rem);
-    }
-    &--prev:not(&-disabled):hover {
-      transform: translateX(-0.2rem);
-    }
-
     // PAGINATION BTN DISABLED
-    &-disabled {
-      filter: grayscale(100%);
-    }
-
     svg {
       box-sizing: content-box;
       fill: $color-primary;
