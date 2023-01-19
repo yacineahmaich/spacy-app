@@ -15,6 +15,7 @@ sortListItems.forEach((item) => {
 
     sortBtn.querySelector("use").setAttribute("href", icon);
     sortBtn.querySelector("label").textContent = label;
+    sortList.classList.remove("show-menu");
   });
 });
 sortBtn.addEventListener("click", toggleSortList);
