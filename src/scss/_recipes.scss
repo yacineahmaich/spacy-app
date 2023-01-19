@@ -11,6 +11,10 @@
   gap: 3rem;
   margin-bottom: $mb-3;
 
+  & > .spinner {
+    grid-column: span 2;
+  }
+
   @media (max-width: 600px) {
     .recipe {
       flex-direction: column;
@@ -51,7 +55,7 @@
     align-items: center;
     overflow: hidden;
     &::before {
-      content: "";
+      content: '';
       position: absolute;
       width: 100%;
       height: 100%;

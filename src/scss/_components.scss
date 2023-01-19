@@ -57,3 +57,24 @@
   visibility: hidden;
   opacity: 0;
 }
+
+.spinner {
+  width: 100%;
+  text-align: center;
+
+  &__icon {
+    width: 7rem;
+    height: 7rem;
+    animation: spin 2s linear infinite;
+    fill: $color-primary;
+
+    @keyframes spin {
+      0% {
+        transform: rotate(0);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+  }
+}
