@@ -30,7 +30,7 @@
 
 .sort {
   position: relative;
-  width: 15rem;
+  width: 18rem;
   z-index: 99;
 
   &__btn {
@@ -44,11 +44,6 @@
     background-color: #fff;
     border-radius: 5px;
     cursor: pointer;
-
-    &:active ~ .sort__list {
-      transform: translateY(1.5rem);
-      opacity: 1;
-    }
 
     &:hover {
       background-color: $color-primary;
@@ -79,12 +74,19 @@
     background-color: #fff;
     right: 0;
     top: 100%;
-    min-width: 100%;
+    transform: translateY(1.5rem);
+    width: 18rem;
     padding: 1rem 0;
     border-radius: 5px;
     box-shadow: 0 0 40px 3px rgba($color: #000000, $alpha: 0.2);
     opacity: 0;
+    display: none;
     transition: 0.3s ease-in-out;
+
+    &.show-menu {
+      display: block;
+      opacity: 1;
+    }
 
     // the arrow in to right
     &::after {
@@ -112,6 +114,7 @@
       width: 100%;
       color: $color-text-dark;
       font-size: 1.3rem;
+      text-transform: capitalize;
       cursor: pointer;
 
       svg {

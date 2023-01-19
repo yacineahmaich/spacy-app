@@ -7,6 +7,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- SCSS -->
   <link rel="stylesheet" href="src/scss/main.scss">
+  <!-- Script For Standard Interactivite -->
+  <script type="module" src="src/js/standard.js"></script>
   <title>Spacy</title>
 </head>
 
@@ -95,7 +97,7 @@
               <svg class="icon--small">
                 <use href="src/img/icons.svg#icon-price"></use>
               </svg>
-              default
+              <span>cocking time</span>
             </label>
           </li>
           <li class="sort__item">
@@ -104,7 +106,7 @@
               <svg class="icon--small">
                 <use href="src/img/icons.svg#icon-time"></use>
               </svg>
-              price
+              <span>price</span>
             </label>
           </li>
           <li class="sort__item">
@@ -112,7 +114,7 @@
               <svg class="icon--small">
                 <use href="src/img/icons.svg#icon-health"></use>
               </svg>
-              health score
+              <span>health score</span>
             </label>
           </li>
         </ul>
@@ -225,9 +227,9 @@
   </div>
 
   <!-- Modal -->
-  <!-- <div>
-    <div class="overlay"></div>
-    <div class="popup">
+  <div>
+    <div class="overlay hidden"></div>
+    <div class="popup hidden">
       <button class="popup__btn popup__btn--close">
         <svg class="icon--small">
           <use href="src/img/icons.svg#icon-close">
@@ -247,7 +249,7 @@
 
       </div>
     </div> <!--- /popup --->
-  <!---</div> -->
+  </div>
 
 </body>
 
