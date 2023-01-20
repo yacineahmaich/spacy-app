@@ -7,6 +7,19 @@
   padding: 2rem 0;
   margin-bottom: $mb-3;
 
+  &__message {
+    font-size: 1.8rem;
+  }
+  &__go {
+    font-family: 'Poppins', sans-serif;
+    color: $color-primary-dark;
+    font-size: 1.8rem;
+    border: none;
+    outline: none;
+    margin-left: 1rem;
+    cursor: pointer;
+  }
+
   &__pages {
     font-size: 1.8rem;
     font-weight: 400;
