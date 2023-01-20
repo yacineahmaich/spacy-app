@@ -12,7 +12,7 @@ export const getJSON = async function (url) {
   try {
     const res = await Promise.race([fetch(url), timeout()]);
 
-    if (!res.ok) throw new Error(`Somthing went wrong :( ${res.status}`);
+    if (!res.ok) throw new Error(`Somthing went wrong : ${res.status}`);
 
     const data = await res.json();
     return data;

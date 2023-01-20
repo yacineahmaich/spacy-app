@@ -6,7 +6,6 @@ export const state = {
   bookmarks: [],
   search: {
     query: '',
-    results: [],
   },
   pagination: {
     num_pages: 0,

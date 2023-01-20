@@ -22,7 +22,7 @@ const paginationController = async function (goto) {
     RecipesView.renderSpinner();
     model.state.pagination.current = goto;
     PaginationView.render(model.state.pagination);
-    window.scrollTo({ left: 0, top: 0, behavior: 'smooth' });
+    window.scrollTo({ left: 0, top: 0 });
     await model.getRecipes();
     RecipesView.render(model.state.recipes);
   } catch (err) {

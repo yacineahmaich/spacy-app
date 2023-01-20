@@ -32,7 +32,8 @@ class PaginationView {
     </button>
 
     <div class="pagination__pages">
-      <span class="pagination__pages--current">${current}</span>
+      <span>${current}</span>
+      /
       <span>${num_pages}</span>
     </div>
 

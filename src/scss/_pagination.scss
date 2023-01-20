@@ -13,12 +13,7 @@
     color: $color-text-dark;
 
     span {
-      padding: 0 1rem;
-    }
-
-    &--current {
-      height: 100%;
-      border-right: 1px solid $color-text-dark;
+      padding: 0 0.5rem;
     }
   }
 
