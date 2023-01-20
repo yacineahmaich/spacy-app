@@ -1,5 +1,7 @@
 import * as model from './model';
+import ModalView from './views/ModalView';
 import PaginationView from './views/PaginationView';
+import QuickSearchView from './views/QuickSearchView';
 import RecipesView from './views/RecipesView';
 import SearchView from './views/SearchView';
 
@@ -33,6 +35,9 @@ const paginationController = async function (goto) {
 
 const SearchRecipesController = async function (query) {
   try {
+    // close the modal
+    ModalView.closeModal();
+
     model.state.search.query = query;
     model.state.pagination.current = 1;
     RecipesView.renderSpinner();
@@ -44,9 +49,15 @@ const SearchRecipesController = async function (query) {
   }
 };
 
+const ShowQuickSearchMenuController = function () {
+  ModalView.showModal();
+};
+
 const init = () => {
   // getRecipesController();
   PaginationView.addHandler(paginationController);
   SearchView.addHandler(SearchRecipesController);
+  QuickSearchView.addHandler(SearchRecipesController);
+  QuickSearchView.addShowMenuHandler(ShowQuickSearchMenuController);
 };
 init();

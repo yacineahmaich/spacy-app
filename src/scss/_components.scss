@@ -10,6 +10,19 @@
 }
 
 // Modal
+.modal {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 999999;
+}
+.modal.hidden {
+  visibility: hidden;
+  opacity: 0;
+}
+
 .overlay {
   position: fixed;
   width: 100%;
@@ -20,7 +33,7 @@
   backdrop-filter: blur(5px);
   z-index: 999;
 }
-.modal {
+.popup {
   position: fixed;
   top: 50%;
   left: 50%;
@@ -52,12 +65,6 @@
     }
   }
 }
-
-.hidden {
-  visibility: hidden;
-  opacity: 0;
-}
-
 .spinner {
   width: 100%;
   text-align: center;
