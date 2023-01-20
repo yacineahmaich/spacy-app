@@ -36,9 +36,9 @@ class PaginationView {
       <span>${num_pages}</span>
     </div>
 
-    <button class="pagination__btn pagination__btn--next" data-goto=${
-      current + 1
-    } ${current === num_pages ? 'pagination__btn--disabled' : ''}>
+    <button class="pagination__btn pagination__btn--next ${
+      current === num_pages ? 'pagination__btn--disabled' : ''
+    }" data-goto=${current + 1}>
       <span>next</span>
       <svg class="icon--small">
         <use href="${icons}#icon-arrow-right"></use>
