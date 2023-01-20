@@ -19,7 +19,7 @@ class PaginationView {
     const { num_pages, current } = this.#data;
 
     // if there only 1 page
-    if (num_pages === 1) return;
+    if (num_pages <= 1) return '';
 
     return `
     <button class="pagination__btn pagination__btn--prev ${
