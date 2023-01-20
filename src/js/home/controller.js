@@ -39,6 +39,9 @@ const SearchRecipesController = async function (query) {
     // close the modal
     ModalView.closeModal();
 
+    // clear search input
+    SearchView.clear();
+
     model.state.search.query = query;
     model.state.pagination.current = 1;
     FoundedRecipesView.clear();
