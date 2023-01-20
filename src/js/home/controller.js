@@ -4,6 +4,7 @@ import PaginationView from './views/PaginationView';
 import QuickSearchView from './views/QuickSearchView';
 import RecipesView from './views/RecipesView';
 import SearchView from './views/SearchView';
+import FoundedRecipesView from './views/FoundedRecipesView';
 
 if (module.hot) {
   module.hot.accept();
@@ -40,8 +41,10 @@ const SearchRecipesController = async function (query) {
 
     model.state.search.query = query;
     model.state.pagination.current = 1;
+    FoundedRecipesView.clear();
     RecipesView.renderSpinner();
     await model.getSearchResults();
+    FoundedRecipesView.render(model.state.search.totalResults);
     RecipesView.render(model.state.recipes);
     PaginationView.render(model.state.pagination);
   } catch (err) {

@@ -6,6 +6,7 @@ export const state = {
   bookmarks: [],
   search: {
     query: '',
+    totalResults: 0,
   },
   pagination: {
     num_pages: 0,
@@ -32,6 +33,7 @@ export const getSearchResults = async function () {
     const data = await getJSON(url);
 
     state.recipes = data.results;
+    state.search.totalResults = data.totalResults;
     state.pagination.num_pages = Math.ceil(data.totalResults / REC_PER_PAGE);
   } catch (err) {
     throw err;
