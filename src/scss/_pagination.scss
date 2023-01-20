@@ -11,6 +11,15 @@
     font-size: 1.8rem;
     font-weight: 400;
     color: $color-text-dark;
+
+    span {
+      padding: 0 1rem;
+    }
+
+    &--current {
+      height: 100%;
+      border-right: 1px solid $color-text-dark;
+    }
   }
 
   &__btn {
@@ -25,6 +34,10 @@
     transition: all 0.3s;
 
     // PAGINATION BTN DISABLED
+    &--disabled {
+      filter: grayscale(100%);
+    }
+
     svg {
       box-sizing: content-box;
       fill: $color-primary;
