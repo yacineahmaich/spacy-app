@@ -45,6 +45,14 @@ class RecipesView {
       )
       .join('');
   }
+
+  renderFeedback(feedback) {
+    this.#parentElement.innerHTML = `
+    <div class="feedback">
+      <p>${feedback} 🚨</p>
+    </div>
+    `;
+  }
 }
 
 export default new RecipesView();

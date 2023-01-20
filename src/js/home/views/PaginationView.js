@@ -7,11 +7,11 @@ class PaginationView {
   render(data) {
     this.#data = data;
     const markup = this._generateMarkup();
-    this._clear();
+    this.clear();
     this.#parentElement.insertAdjacentHTML('afterbegin', markup);
   }
 
-  _clear() {
+  clear() {
     this.#parentElement.innerHTML = '';
   }
 
@@ -32,9 +32,8 @@ class PaginationView {
     </button>
 
     <div class="pagination__pages">
-      <span>${current}</span>
-      /
-      <span>${num_pages}</span>
+      <span class="pagination__pages-current">${current}</span>
+      <span class="pagination__pages-num_pages">${num_pages}</span>
     </div>
 
     <button class="pagination__btn pagination__btn--next ${

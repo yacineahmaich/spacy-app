@@ -85,3 +85,12 @@
     }
   }
 }
+
+.feedback {
+  width: 100%;
+  grid-column: span 2;
+  text-align: center;
+  p {
+    font-size: 1.8rem;
+  }
+}

@@ -16,7 +16,8 @@ const getRecipesController = async function () {
     await model.getRecipes();
     RecipesView.render(model.state.recipes);
   } catch (err) {
-    console.error(err.message);
+    RecipesView.renderFeedback(err.message);
+    PaginationView.clear();
   }
 };
 
@@ -30,7 +31,8 @@ const paginationController = async function (goto) {
     await model.getSearchResults();
     RecipesView.render(model.state.recipes);
   } catch (err) {
-    console.error(err);
+    RecipesView.renderFeedback(err.message);
+    PaginationView.clear();
   }
 };
 
@@ -47,11 +49,22 @@ const SearchRecipesController = async function (query) {
     FoundedRecipesView.clear();
     RecipesView.renderSpinner();
     await model.getSearchResults();
+
+    if (model.state.recipes.length === 0) {
+      RecipesView.renderFeedback(
+        `No results matching "${model.state.search.query}" ! Please try again`
+      );
+      // remove pagination if user did search of existing recipe before
+      PaginationView.clear();
+      return;
+    }
+
     FoundedRecipesView.render(model.state.search.totalResults);
     RecipesView.render(model.state.recipes);
     PaginationView.render(model.state.pagination);
   } catch (err) {
-    console.error(err);
+    RecipesView.renderFeedback(err.message);
+    PaginationView.clear();
   }
 };
 
@@ -60,7 +73,7 @@ const ShowQuickSearchMenuController = function () {
 };
 
 const init = () => {
-  // getRecipesController();
+  getRecipesController();
   PaginationView.addHandler(paginationController);
   SearchView.addHandler(SearchRecipesController);
   QuickSearchView.addHandler(SearchRecipesController);
