@@ -4,6 +4,14 @@ class PaginationView {
   #parentElement = document.querySelector('.pagination');
   #data;
 
+  constructor() {
+    document
+      .querySelector('.pagination__go')
+      .addEventListener('click', function () {
+        document.querySelector('.search__field').focus();
+      });
+  }
+
   render(data) {
     this.#data = data;
     const markup = this._generateMarkup();
@@ -13,6 +21,14 @@ class PaginationView {
 
   clear() {
     this.#parentElement.innerHTML = '';
+  }
+
+  disablePagination() {
+    this.#parentElement.classList.add('pagination--disabled');
+  }
+
+  enablePagination() {
+    this.#parentElement.classList.remove('pagination--disabled');
   }
 
   _generateMarkup() {

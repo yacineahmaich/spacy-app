@@ -26,10 +26,11 @@ const paginationController = async function (goto) {
     RecipesView.renderSpinner();
     model.state.pagination.current = goto;
     PaginationView.render(model.state.pagination);
+    PaginationView.disablePagination();
     window.scrollTo({ left: 0, top: 0 });
-    // await model.getRecipes();
     await model.getSearchResults();
     RecipesView.render(model.state.recipes);
+    PaginationView.enablePagination();
   } catch (err) {
     RecipesView.renderFeedback(err.message);
     PaginationView.clear();
