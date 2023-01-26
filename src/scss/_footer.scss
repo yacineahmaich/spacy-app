@@ -3,27 +3,32 @@
   bottom: 0;
   left: 0;
   width: 100%;
-  padding: 3rem 5rem;
+  padding: 2rem 5rem;
   background-color: $color-text-dark;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
+
+  @media (max-width: 600px) {
+    &__copyright {
+      order: 3 !important;
+      width: 100% !important;
+      margin-top: 2rem;
+    }
+    &__logo {
+      height: 5rem !important;
+    }
+  }
 
   &__logo {
     height: 6rem;
-    @media (max-width: 600px) {
-      height: 4rem;
-    }
   }
 
   &__copyright {
     color: $color-gray;
     font-size: 1.6rem;
-
-    @media (max-width: 600px) {
-      font-size: 1.4rem;
-      text-align: center;
-    }
+    text-align: center;
 
     strong {
       color: #fff;
@@ -34,20 +39,17 @@
     display: flex;
     align-items: center;
     gap: 2rem;
-    @media (max-width: 600px) {
-      gap: 1rem;
-    }
 
     &-item {
-      background-color: $color-gray;
       border-radius: 50%;
       overflow: hidden;
 
       &:hover {
-        background-color: $color-text-light;
+        background-color: $color-gray;
       }
       &:hover a svg {
-        transform: scale(1.3);
+        transform: scale(1.2);
+        fill: $color-text-dark;
       }
 
       a {
@@ -57,14 +59,9 @@
         justify-content: center;
         align-items: center;
 
-        @media (max-width: 600px) {
-          width: 3rem;
-          height: 3rem;
-          padding: 0.5rem;
-        }
-
         svg {
           transition: all 0.3s;
+          fill: #fff;
         }
       }
     }

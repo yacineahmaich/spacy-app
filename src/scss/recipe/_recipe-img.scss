@@ -1,0 +1,72 @@
+.recipe {
+  position: relative;
+  width: 100%;
+  padding: 0 5rem;
+  margin-bottom: $mb-3;
+
+  @media (max-width: 600px) {
+    padding: 0 2rem;
+
+    &__img {
+      height: 25rem !important;
+    }
+    &__btn {
+      padding: 1.3rem !important;
+    }
+  }
+
+  &__img {
+    position: relative;
+    width: 100%;
+    height: 40rem;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background-color: $color-primary-very-light;
+      z-index: 1;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__btn {
+    position: absolute;
+    bottom: 3rem;
+    right: 3rem;
+    z-index: 9;
+    border-radius: 50%;
+    padding: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    outline: none;
+    background-image: linear-gradient(
+      to right bottom,
+      $color-primary-dark,
+      $color-primary
+    );
+    cursor: pointer;
+    transition: transform 0.2s;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+    &:active {
+      transform: scale(0.9);
+    }
+
+    svg {
+      fill: #fff;
+    }
+  }
+}

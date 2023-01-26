@@ -1,0 +1,52 @@
+.steps {
+  background-color: #fff;
+  padding: 3rem 0 0 0 !important;
+
+  @media (max-width: 600px) {
+    .step {
+      gap: 1.5rem !important;
+      &__number {
+        width: 3.5rem !important;
+        height: 3.5rem !important;
+      }
+      &__text {
+        font-size: 1.5rem !important;
+      }
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    background-color: $color-gray;
+  }
+
+  .step {
+    display: flex;
+    align-items: baseline;
+    gap: 2rem;
+
+    &__number {
+      width: 4rem;
+      height: 4rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: $color-primary;
+      border-radius: 50%;
+
+      span {
+        font-size: 1.6rem;
+        font-weight: 500;
+        color: #fff;
+      }
+    }
+
+    &__text {
+      flex: 1;
+      font-size: 1.7rem;
+      font-weight: 500;
+    }
+  }
+}

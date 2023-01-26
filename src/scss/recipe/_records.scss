@@ -1,0 +1,66 @@
+.records {
+  width: 100%;
+  padding: 2rem 5rem;
+  background-color: #fff;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: $mb-3;
+
+  @media (max-width: 600px) {
+    justify-content: space-between !important;
+    .record {
+      padding: 0;
+      gap: 1rem;
+      &__header {
+        flex-direction: column;
+        gap: 1.5rem;
+      }
+      &__label {
+        font-size: 1.6rem !important;
+        text-align: center;
+      }
+    }
+  }
+}
+
+.record {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 0 2rem;
+
+  &__header {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+
+    svg {
+      &.icon-likes {
+        fill: #ff0000;
+      }
+      &.icon-healt {
+        fill: #00ab00;
+      }
+      &.icon-servings {
+        fill: #3e7fff;
+      }
+      &.icon-price {
+        fill: #fbdd43;
+      }
+    }
+  }
+  &__label {
+    font-size: 1.8rem;
+    text-transform: capitalize;
+    font-weight: 500;
+    color: #000;
+  }
+
+  &__value {
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 500;
+  }
+}
