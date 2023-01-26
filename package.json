@@ -4,8 +4,8 @@
   "description": "",
   "author": "Yacine Ahmaich",
   "scripts": {
-    "start": "parcel index.html",
-    "build": "parcel build index.html"
+    "start": "parcel ./*.html",
+    "build": "parcel build ./*.html"
   },
   "license": "ISC",
   "dependencies": {
