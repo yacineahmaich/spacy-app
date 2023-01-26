@@ -5,7 +5,7 @@
   "author": "Yacine Ahmaich",
   "scripts": {
     "start": "parcel index.html recipe.html",
-    "build": "parcel build ./*.html"
+    "build": "parcel build index.html recipe.html"
   },
   "license": "ISC",
   "dependencies": {
