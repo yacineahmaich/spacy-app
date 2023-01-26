@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- SCSS -->
+  <link rel="stylesheet" href="src/scss/recipe.scss">
+  <title>Recipe title</title>
+</head>
+
+<body>
+  <div class="container">
+
+    <!-- Header -->
+    <header class="header">
+      <img src="src/img/logo.svg" class="header__logo" alt="Logo">
+      <nav class="nav">
+        <ul class="nav__list">
+          <li class="nav__item nav__item--bookmarks">
+            <button class="nav__btn nav__btn--bookmarks">
+              <svg class="nav__icon nav__icon--bookmarks">
+                <use href="src/img/icons.svg#icon-bookmark-fill"></use>
+              </svg>
+              <span class="nav__btn-text">bookmarks</span>
+            </button>
+            <!-- Bookmarks -->
+            <ul class="bookmarks">
+              <li class="bookmark">
+                <div class="bookmark__img">
+                  <img src="src/img/demo-recipe.jpg" alt="recipe">
+                </div>
+                <h4 class="bookmark__title">Pasta with Garlic, Scallions, Cauliflower & Breadcrumbs</h4>
+
+                <button class="bookmark__btn bookmark__btn--remove">
+                  <svg class="icon--small">
+                    <use href="src/img/icons.svg#icon-remove"></use>
+                  </svg>
+                </button>
+
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Title -->
+    <section class="title">
+      <h1 class="title__text">Pasta with Garlic, Scallions, Cauliflower & Breadcrumbs</h1>
+    </section>
+
+
+    <!-- Recipe Image -->
+    <section class="recipe">
+      <div class="recipe__img">
+        <img src="src/img/demo-recipe-big.jpg" alt="Recipe">
+        <button class="recipe__btn recipe__btn--bookmark">
+          <svg class="icon--medium">
+            <use href="src/img/icons.svg#icon-bookmark"></use>
+          </svg>
+        </button>
+      </div>
+    </section>
+
+
+    <!-- Records -->
+    <section class="records">
+      <div class="record">
+        <div class="record__header">
+          <svg class="icon--medium icon-likes">
+            <use href="src/img/icons.svg#icon-heart"></use>
+          </svg>
+          <span class="record__label">likes</span>
+        </div>
+        <span class="record__value">209</span>
+      </div>
+      <div class="record">
+        <div class="record__header">
+          <svg class="icon--medium icon-healt">
+            <use href="src/img/icons.svg#icon-healt"></use>
+          </svg>
+          <span class="record__label">healt score</span>
+        </div>
+        <span class="record__value">19%</span>
+      </div>
+      <div class="record">
+        <div class="record__header">
+          <svg class="icon--medium icon-servings">
+            <use href="src/img/icons.svg#icon-servings"></use>
+          </svg>
+          <span class="record__label">servings</span>
+        </div>
+        <span class="record__value">2</span>
+      </div>
+      <div class="record">
+        <div class="record__header">
+          <svg class="icon--medium icon-price">
+            <use href="src/img/icons.svg#icon-price"></use>
+          </svg>
+          <span class="record__label">price</span>
+        </div>
+        <span class="record__value">$67</span>
+      </div>
+    </section>
+
+
+    <!-- Statistics -->
+    <section class="statistics">
+
+      <div class="statistic">
+        <svg class="icon--big">
+          <use href="src/img/icons.svg#icon-ingredients"></use>
+        </svg>
+        <h3 class="statistic__value">8</h3>
+        <span class="statistic__label">Ingredients</span>
+      </div>
+
+      <div class="statistic">
+        <svg class="icon--big">
+          <use href="src/img/icons.svg#icon-timer"></use>
+        </svg>
+        <h3 class="statistic__value">00:45</h3>
+        <span class="statistic__label">Estimated time</span>
+      </div>
+
+      <div class="statistic">
+        <svg class="icon--big">
+          <use href="src/img/icons.svg#icon-steps"></use>
+        </svg>
+        <h3 class="statistic__value">9</h3>
+        <span class="statistic__label">Steps</span>
+      </div>
+
+    </section>
+
+
+
+    <!-- Sammury -->
+    <section class="section sammury">
+      <div class="section__header">
+        <div class="section__header-wrapper">
+          <svg class="icon--big">
+            <use href="src/img/icons.svg#icon-sammury"></use>
+          </svg>
+          <h2>Recipe sammury</h2>
+        </div>
+      </div>
+      <div class="section__content">
+        <p class="sammury__text">The recipe Soy-and-Ginger-Glazed Salmon with Udon Noodles can be made in
+          approximately 1 hour and 35 minutes
+          . One portion of this dish contains about 48g of protein , 17g of fat , and a total of 552 calories . This
+          recipe serves 4. For $5.91 per serving, this recipe covers 47% of your daily requirements of vitamins and
+          minerals. It works well as a main course. 1 person has tried and liked this recipe. It is brought to you by
+          Food and Wine. If you have fresh ginger, udon noodles, salmon fillets, and a few other ingredients on hand,
+          you can make it. It is a good option if you're following a dairy free and pescatarian diet. All things
+          considered, we decided this recipe deserves a spoonacular score of 92% . This score is great. If you like
+          this recipe, take a look at these similar recipes: Salmon With Soy-ginger Noodles, Ginger-Soy Salmon With
+          Soba Noodles, and Soy & ginger salmon with soba noodles.</p>
+        <p class="sammury__credit">Recipe Credit : <a href="#">Full Belly Sisters</a></p>
+      </div>
+    </section>
+
+
+    <!-- Ingredients -->
+    <section class="section ingredients">
+      <div class="section__header">
+        <div class="section__header-wrapper">
+          <svg class="icon--big">
+            <use href="src/img/icons.svg#icon-ingredients"></use>
+          </svg>
+          <h2>Ingredients</h2>
+        </div>
+      </div>
+      <div class="section__content ingredients__wrapper">
+        <div class="ingredient">
+          <svg class="icon--medium">
+            <use href="src/img/icons.svg#icon-checkmark"></use>
+          </svg>
+          <p class="ingredient__description">1 tbsp butter</p>
+          <div class="ingredient__img">
+            <img src="src/img/demo-ingredient-1.jpg" alt="ingredient">
+          </div>
+        </div>
+        <div class="ingredient">
+          <svg class="icon--medium">
+            <use href="src/img/icons.svg#icon-checkmark"></use>
+          </svg>
+          <p class="ingredient__description">2 tbsp grated cheese (I used romano)</p>
+          <div class="ingredient__img">
+            <img src="src/img/demo-ingredient-2.jpg" alt="ingredient">
+          </div>
+        </div>
+        <div class="ingredient">
+          <svg class="icon--medium">
+            <use href="src/img/icons.svg#icon-checkmark"></use>
+          </svg>
+          <p class="ingredient__description">6-8 ounces pasta (I used linguine)</p>
+          <div class="ingredient__img">
+            <img src="src/img/demo-ingredient-3.jpg" alt="ingredient">
+          </div>
+        </div>
+        <div class="ingredient">
+          <svg class="icon--medium">
+            <use href="src/img/icons.svg#icon-checkmark"></use>
+          </svg>
+          <p class="ingredient__description">couple of pinches red pepper flakes, optional</p>
+          <div class="ingredient__img">
+            <img src="src/img/demo-ingredient-4.jpg" alt="ingredient">
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Steps -->
+    <section class="section steps">
+      <div class="section__header">
+        <div class="section__header-wrapper">
+          <svg class="icon--big">
+            <use href="src/img/icons.svg#icon-steps"></use>
+          </svg>
+          <h2>How to make recipe</h2>
+        </div>
+      </div>
+      <div class="section__content steps__wrapper">
+        <div class="step">
+          <div class="step__number">
+            <span>1</span>
+          </div>
+          <p class="step__text">Preheat the oven to 200 degrees F.</p>
+        </div>
+        <div class="step">
+          <div class="step__number">
+            <span>2</span>
+          </div>
+          <p class="step__text">Whisk together the flour, pecans, granulated sugar, light brown sugar, baking powder,
+            baking soda, and salt in a medium bowl.</p>
+        </div>
+        <div class="step">
+          <div class="step__number">
+            <span>3</span>
+          </div>
+          <p class="step__text">dd the egg mixture to the dry mixture and gently mix to combine. Do not overmix.</p>
+        </div>
+        <div class="step">
+          <div class="step__number">
+            <span>4</span>
+          </div>
+          <p class="step__text">Let the batter sit at room temperature for at least 15 minutes and up to 30 minutes
+            before using.</p>
+        </div>
+        <div class="step">
+          <div class="step__number">
+            <span>5</span>
+          </div>
+          <p class="step__text">Heat a cast iron or nonstick griddle pan over medium heat and brush with melted butter.
+            Once the butter begins to sizzle, use 2 tablespoons of the batter for each pancake and cook until the
+            bubbles appear on the surface and the bottom is golden brown, about 2 minutes, flip over and cook until the
+            bottom is golden brown, 1 to 2 minutes longer.</p>
+        </div>
+        <div class="step">
+          <div class="step__number">
+            <span>6</span>
+          </div>
+          <p class="step__text">Transfer the pancakes to a platter and keep warm in a 200 degree F oven.</p>
+        </div>
+        <div class="step">
+          <div class="step__number">
+            <span>7</span>
+          </div>
+          <p class="step__text">Serve 6 pancakes per person, top each with some of the bourbon butter.</p>
+        </div>
+        <div class="step">
+          <div class="step__number">
+            <span>8</span>
+          </div>
+          <p class="step__text">Drizzle with warm maple syrup and dust with confectioners' sugar.</p>
+        </div>
+        <div class="step">
+          <div class="step__number">
+            <span>9</span>
+          </div>
+          <p class="step__text">Garnish with fresh mint sprigs and more toasted pecans, if desired.</p>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Similar recipes -->
+    <section class="similar">
+      <div class="similar__title">
+        <h4>You might like also</h4>
+      </div>
+      <div class="similar__recipe">
+        <div class="similar__img">
+          <img src="src/img/demo-recipe.jpg" alt="demo recipe">
+        </div>
+        <div class="similar__info">
+          <h2 class="similar__info-title">Pasta with Garlic, Scallions, Cauliflower & Breadcrumbs</h2>
+        </div>
+      </div>
+      <div class="similar__recipe">
+        <div class="similar__img">
+          <img src="src/img/demo-recipe.jpg" alt="demo recipe">
+        </div>
+        <div class="similar__info">
+          <h2 class="similar__info-title">Pasta with Garlic, Scallions, Cauliflower & Breadcrumbs</h2>
+        </div>
+      </div>
+      <div class="similar__recipe">
+        <div class="similar__img">
+          <img src="src/img/demo-recipe.jpg" alt="demo recipe">
+        </div>
+        <div class="similar__info">
+          <h2 class="similar__info-title">Pasta with Garlic, Scallions, Cauliflower & Breadcrumbs</h2>
+        </div>
+      </div>
+      <div class="similar__recipe">
+        <div class="similar__img">
+          <img src="src/img/demo-recipe.jpg" alt="demo recipe">
+        </div>
+        <div class="similar__info">
+          <h2 class="similar__info-title">Pasta with Garlic, Scallions, Cauliflower & Breadcrumbs</h2>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Recipe Origin -->
+    <section class="origin">
+      <h2 class="origin__title">check the link below for more details</h2>
+      <a href="#" class="origin__link">
+        <span>Go To Website</span>
+        &rarr;
+      </a>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+      <img src="src/img/logo-icon.svg" alt="Logo" class="footer__logo">
+
+      <p class="footer__copyright">© Copyright by <strong>Spacy Food</strong> all rights reserved</p>
+
+      <ul class="footer__links">
+        <li class="footer__links-item">
+          <a href="#">
+            <svg class="icon--medium">
+              <use href="src/img/icons.svg#icon-twitter"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="footer__links-item">
+          <a href="#">
+            <svg class="icon--medium">
+              <use href="src/img/icons.svg#icon-instagram"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="footer__links-item">
+          <a href="#">
+            <svg class="icon--medium">
+              <use href="src/img/icons.svg#icon-github"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </footer>
+
+  </div>
+</body>
+
+</html>
