@@ -5,6 +5,7 @@ import striptags from 'striptags';
 export const state = {
   recipe: {},
   similar: [],
+  bookmarks: [],
 };
 
 const getIngredientImageUrl = function (imgName) {
@@ -20,8 +21,9 @@ export const getRecipe = async function (id) {
       getJSON(`${API_URL}${id}/information?apiKey=${API_KEY}`),
       getJSON(`${API_URL}${id}/similar?apiKey=${API_KEY}&number=4`),
     ]);
-
     state.recipe = {
+      bookmarked: !!state.bookmarks.find(rec => rec.id === recipeData.id),
+      id: recipeData.id,
       title: recipeData.title,
       image: getRecipeImageUrl(recipeData.id, recipeData.imageType),
       records: {
@@ -61,3 +63,30 @@ export const getRecipe = async function (id) {
     throw err;
   }
 };
+
+export const persistBookmarks = function () {
+  const storage = JSON.stringify(state.bookmarks);
+  localStorage.setItem('bookmarks', storage);
+};
+
+export const addToBookmarks = function () {
+  state.bookmarks.push({ ...state.recipe, bookmarked: true });
+  state.recipe.bookmarked = true;
+
+  persistBookmarks();
+};
+export const removeFromBookmarks = function () {
+  state.bookmarks = state.bookmarks.filter(
+    recipe => recipe.id !== state.recipe.id
+  );
+  state.recipe.bookmarked = false;
+
+  persistBookmarks();
+};
+
+const init = () => {
+  const storage = JSON.parse(localStorage.getItem('bookmarks'));
+  if (!storage) return;
+  state.bookmarks = storage;
+};
+init();

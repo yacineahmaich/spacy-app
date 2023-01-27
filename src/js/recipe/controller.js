@@ -1,6 +1,7 @@
 import * as model from './model';
 import { getRecipeId } from '../helpers';
 
+import BookmarksView from '../views/BookmarksView';
 import TitleView from './views/TitleView';
 import RecipeImgView from './views/RecipeImgView';
 import RecordsView from './views/RecordsView';
@@ -18,6 +19,9 @@ if (module.hot) {
 
 const RecipeController = async function (id) {
   try {
+    const { bookmarks } = model.state;
+    BookmarksView.render({ bookmarks, current: model.state.recipe.id });
+
     await model.getRecipe(id);
     const {
       title,
@@ -31,7 +35,10 @@ const RecipeController = async function (id) {
     } = model.state.recipe;
 
     TitleView.render(title);
-    RecipeImgView.render(image);
+    document.title = `Spacy | ${title}`;
+
+    RecipeImgView.render({ image, bookmarked: model.state.recipe.bookmarked });
+
     RecordsView.render(records);
     StatisticsView.render(statistics);
     SummaryView.render(summary);
@@ -44,9 +51,25 @@ const RecipeController = async function (id) {
   }
 };
 
+const BookmarkController = function () {
+  if (!model.state.recipe.bookmarked) {
+    model.addToBookmarks();
+  } else {
+    model.removeFromBookmarks();
+  }
+  RecipeImgView.render({
+    image: model.state.recipe.image,
+    bookmarked: model.state.recipe.bookmarked,
+  });
+
+  const { bookmarks } = model.state;
+  BookmarksView.render({ bookmarks, current: model.state.recipe.id });
+};
+
 const init = () => {
   const recipeId = getRecipeId();
 
   RecipeController(recipeId);
+  RecipeImgView.addHandler(BookmarkController);
 };
 init();

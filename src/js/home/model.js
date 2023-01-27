@@ -39,3 +39,12 @@ export const getSearchResults = async function () {
     throw err;
   }
 };
+
+const init = () => {
+  const storage = JSON.parse(localStorage.getItem('bookmarks'));
+
+  if (!storage) return;
+
+  state.bookmarks = storage;
+};
+init();

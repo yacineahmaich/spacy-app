@@ -5,6 +5,7 @@ import QuickSearchView from './views/QuickSearchView';
 import RecipesView from './views/RecipesView';
 import SearchView from './views/SearchView';
 import FoundedRecipesView from './views/FoundedRecipesView';
+import BookmarksView from '../views/BookmarksView';
 
 if (module.hot) {
   module.hot.accept();
@@ -41,7 +42,6 @@ const SearchRecipesController = async function (query) {
   try {
     // close the modal
     ModalView.closeModal();
-
     // clear search input
     SearchView.clear();
 
@@ -74,6 +74,10 @@ const ShowQuickSearchMenuController = function () {
 };
 
 const init = () => {
+  // Load Bookmarked recipes from storage
+  const { bookmarks } = model.state;
+  BookmarksView.render({ bookmarks });
+
   getRecipesController();
   PaginationView.addHandler(paginationController);
   SearchView.addHandler(SearchRecipesController);
