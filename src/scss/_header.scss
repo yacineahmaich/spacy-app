@@ -5,16 +5,20 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 0 5rem;
   margin-bottom: $mb-3;
+
+  @media (max-width: 600px) {
+    padding: 0 3rem !important;
+  }
+
   &__logo {
     height: 100%;
-    margin-left: 5rem;
   }
 }
 
 .nav {
   align-self: stretch;
-  margin-right: 5rem;
   height: 100%;
 
   &__list {

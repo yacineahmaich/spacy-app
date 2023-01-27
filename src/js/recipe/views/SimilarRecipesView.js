@@ -23,14 +23,16 @@ class StepsView {
     ${this.#data
       .map(
         recipe => `
-    <a href="${recipe.url}" class="similar__recipe">
-      <div class="similar__img">
-        <img src=${recipe.image} alt=${recipe.title}>
-      </div>
-      <div class="similar__info">
-        <h2 class="similar__info-title">${recipe.title}</h2>
-      </div>
-    </a>
+        <a href="${recipe.url}">
+          <div  class="similar__recipe">
+            <div class="similar__img">
+              <img src=${recipe.image} alt=${recipe.title}>
+            </div>
+            <div class="similar__info">
+              <h2 class="similar__info-title">${recipe.title}</h2>
+            </div>
+          </div>
+        </a>
     `
       )
       .join('')}

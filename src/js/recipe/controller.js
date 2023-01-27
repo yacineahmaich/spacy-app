@@ -40,7 +40,7 @@ const RecipeController = async function (id) {
     SimilarRecipesView.render(model.state.similar);
     SourceView.render(source);
   } catch (err) {
-    PageView.notFound();
+    PageView.notFound(err.message);
   }
 };
 

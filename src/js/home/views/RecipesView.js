@@ -30,17 +30,19 @@ class RecipesView {
     return this.#data
       .map(
         recipe => `
-      <div class="recipe">
-        <div class="recipe__img">
-          <img src="${recipe.image}" alt="${recipe.title}">
-        </div>
-        <div class="recipe__info">
-          <h2 class="recipe__info-title">${recipe.title}</h2>
-          <p class="recipe__info-author">${
-            recipe.author ?? recipe.sourceName
-          }</p>
-        </div>
-      </div>
+        <a href="/recipe.html?recipe_id=${recipe.id}">
+          <div class="recipe">
+            <div class="recipe__img">
+              <img src="${recipe.image}" alt="${recipe.title}">
+            </div>
+            <div class="recipe__info">
+              <h2 class="recipe__info-title">${recipe.title}</h2>
+              <p class="recipe__info-author">${
+                recipe.author ?? recipe.sourceName
+              }</p>
+            </div>
+          </div>
+        </a>
     `
       )
       .join('');

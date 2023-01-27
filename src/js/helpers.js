@@ -18,6 +18,9 @@ export const getJSON = async function (url) {
         `We reach the limit of requests today ! Please try again later`
       );
 
+    if (!res.ok && res.status === 404)
+      throw new Error(`Recipe Not Found  ! Please try again`);
+
     if (!res.ok) throw new Error(`Something went wrong ! Please try again`);
 
     const data = await res.json();
