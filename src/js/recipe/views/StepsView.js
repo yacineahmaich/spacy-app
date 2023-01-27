@@ -41,7 +41,7 @@ class StepsView {
               )
               .join('')
           : `<div class="steps__not-found">
-                <p>No cooking instructions !</p>
+                <p>No cooking instructions included!</p>
                 <svg>
                   <use href="${icons}#icon-not-found"></use>
                 </svg>

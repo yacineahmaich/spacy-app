@@ -10,6 +10,7 @@ import IngredientsView from './views/IngredientsView';
 import StepsView from './views/StepsView';
 import SimilarRecipesView from './views/SimilarRecipesView';
 import SourceView from './views/SourceView';
+import PageView from './views/PageView';
 
 if (module.hot) {
   module.hot.accept();
@@ -39,13 +40,13 @@ const RecipeController = async function (id) {
     SimilarRecipesView.render(model.state.similar);
     SourceView.render(source);
   } catch (err) {
-    console.error(err.message);
+    PageView.notFound();
   }
 };
 
 const init = () => {
   const recipeId = getRecipeId();
-  if (!recipeId) return;
+
   RecipeController(recipeId);
 };
 init();

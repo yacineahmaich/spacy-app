@@ -1,4 +1,4 @@
-import { API_KEY, API_URL, REC_PER_PAGE } from '../config';
+import { API_KEY, API_URL } from '../config';
 import { getJSON } from '../helpers';
 import striptags from 'striptags';
 
@@ -11,7 +11,7 @@ const getIngredientImageUrl = function (imgName) {
   return `https://spoonacular.com/cdn/ingredients_100x100/${imgName}`;
 };
 const getRecipeImageUrl = function (id, imgType) {
-  return `https://spoonacular.com/recipeImages/${id}-556x370.${imgType}`;
+  return `https://spoonacular.com/recipeImages/${id}-636x393.${imgType}`;
 };
 
 export const getRecipe = async function (id) {
@@ -23,7 +23,7 @@ export const getRecipe = async function (id) {
 
     state.recipe = {
       title: recipeData.title,
-      image: recipeData.image,
+      image: getRecipeImageUrl(recipeData.id, recipeData.imageType),
       records: {
         likes: recipeData.aggregateLikes,
         healthScore: recipeData.healthScore,
@@ -57,8 +57,7 @@ export const getRecipe = async function (id) {
         image: getRecipeImageUrl(recipe.id, recipe.imageType),
       };
     });
-    console.log(similarRecipes);
   } catch (err) {
-    console.error(err.message);
+    throw err;
   }
 };

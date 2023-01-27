@@ -12,11 +12,10 @@
   <title>Recipe title</title>
 </head>
 
-<body style="overflow-y: hidden;">
+<body>
 
-  <div class="preload"></div>
 
-  <div class="container" style="display: none;">
+  <div class="container">
 
     <!-- Header -->
     <header class="header">
@@ -295,13 +294,6 @@
 
   </div>
 
-  <script>
-    window.addEventListener('load', function () {
-      document.body.style.overflowY = 'scroll'
-      document.querySelector('.preload').style.display = 'none'
-      document.querySelector('.container').style.display = 'block'
-    })
-  </script>
 </body>
 
 </html>
