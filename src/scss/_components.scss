@@ -177,6 +177,7 @@
   flex-direction: column;
   align-items: center;
   background-color: #fff;
+  background-color: $color-text-dark;
 
   @media (max-width: 600px) {
     &__message {
@@ -185,9 +186,10 @@
   }
 
   &__message {
-    font-weight: 400;
+    font-weight: 300;
     font-size: 2rem;
     text-align: center;
+    color: #fff;
   }
   &__icon {
     width: 30rem;
