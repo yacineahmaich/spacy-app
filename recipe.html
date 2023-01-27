@@ -7,11 +7,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- SCSS -->
   <link rel="stylesheet" href="src/scss/recipe.scss">
+  <!-- JS -->
+  <script type="module" src="src/js/recipe/controller.js"></script>
   <title>Recipe title</title>
 </head>
 
-<body>
-  <div class="container">
+<body style="overflow-y: hidden;">
+
+  <div class="preload"></div>
+
+  <div class="container" style="display: none;">
 
     <!-- Header -->
     <header class="header">
@@ -38,7 +43,6 @@
                     <use href="src/img/icons.svg#icon-remove"></use>
                   </svg>
                 </button>
-
               </li>
             </ul>
           </li>
@@ -48,26 +52,26 @@
 
     <!-- Title -->
     <section class="title">
-      <h1 class="title__text">Pasta with Garlic, Scallions, Cauliflower & Breadcrumbs</h1>
+      <!-- <h1 class="title__text">Pasta with Garlic, Scallions, Cauliflower & Breadcrumbs</h1> -->
     </section>
 
 
     <!-- Recipe Image -->
     <section class="recipe">
-      <div class="recipe__img">
+      <!-- <div class="recipe__img">
         <img src="src/img/demo-recipe-big.jpg" alt="Recipe">
         <button class="recipe__btn recipe__btn--bookmark">
           <svg class="icon--medium">
             <use href="src/img/icons.svg#icon-bookmark"></use>
           </svg>
         </button>
-      </div>
+      </div> -->
     </section>
 
 
     <!-- Records -->
     <section class="records">
-      <div class="record">
+      <!-- <div class="record">
         <div class="record__header">
           <svg class="icon--medium icon-likes">
             <use href="src/img/icons.svg#icon-heart"></use>
@@ -102,14 +106,14 @@
           <span class="record__label">price</span>
         </div>
         <span class="record__value">$67</span>
-      </div>
+      </div> -->
     </section>
 
 
     <!-- Statistics -->
     <section class="statistics">
 
-      <div class="statistic">
+      <!-- <div class="statistic">
         <svg class="icon--big">
           <use href="src/img/icons.svg#icon-ingredients"></use>
         </svg>
@@ -131,15 +135,15 @@
         </svg>
         <h3 class="statistic__value">9</h3>
         <span class="statistic__label">Steps</span>
-      </div>
+      </div> -->
 
     </section>
 
 
 
     <!-- Sammury -->
-    <section class="section sammury">
-      <div class="section__header">
+    <section class="section summary">
+      <!-- <div class="section__header">
         <div class="section__header-wrapper">
           <svg class="icon--big">
             <use href="src/img/icons.svg#icon-sammury"></use>
@@ -159,13 +163,13 @@
           this recipe, take a look at these similar recipes: Salmon With Soy-ginger Noodles, Ginger-Soy Salmon With
           Soba Noodles, and Soy & ginger salmon with soba noodles.</p>
         <p class="sammury__credit">Recipe Credit : <a href="#">Full Belly Sisters</a></p>
-      </div>
+      </div> -->
     </section>
 
 
     <!-- Ingredients -->
     <section class="section ingredients">
-      <div class="section__header">
+      <!-- <div class="section__header">
         <div class="section__header-wrapper">
           <svg class="icon--big">
             <use href="src/img/icons.svg#icon-ingredients"></use>
@@ -183,40 +187,13 @@
             <img src="src/img/demo-ingredient-1.jpg" alt="ingredient">
           </div>
         </div>
-        <div class="ingredient">
-          <svg class="icon--medium">
-            <use href="src/img/icons.svg#icon-checkmark"></use>
-          </svg>
-          <p class="ingredient__description">2 tbsp grated cheese (I used romano)</p>
-          <div class="ingredient__img">
-            <img src="src/img/demo-ingredient-2.jpg" alt="ingredient">
-          </div>
-        </div>
-        <div class="ingredient">
-          <svg class="icon--medium">
-            <use href="src/img/icons.svg#icon-checkmark"></use>
-          </svg>
-          <p class="ingredient__description">6-8 ounces pasta (I used linguine)</p>
-          <div class="ingredient__img">
-            <img src="src/img/demo-ingredient-3.jpg" alt="ingredient">
-          </div>
-        </div>
-        <div class="ingredient">
-          <svg class="icon--medium">
-            <use href="src/img/icons.svg#icon-checkmark"></use>
-          </svg>
-          <p class="ingredient__description">couple of pinches red pepper flakes, optional</p>
-          <div class="ingredient__img">
-            <img src="src/img/demo-ingredient-4.jpg" alt="ingredient">
-          </div>
-        </div>
-      </div>
+      </div> -->
     </section>
 
 
     <!-- Steps -->
     <section class="section steps">
-      <div class="section__header">
+      <!-- <div class="section__header">
         <div class="section__header-wrapper">
           <svg class="icon--big">
             <use href="src/img/icons.svg#icon-steps"></use>
@@ -231,66 +208,13 @@
           </div>
           <p class="step__text">Preheat the oven to 200 degrees F.</p>
         </div>
-        <div class="step">
-          <div class="step__number">
-            <span>2</span>
-          </div>
-          <p class="step__text">Whisk together the flour, pecans, granulated sugar, light brown sugar, baking powder,
-            baking soda, and salt in a medium bowl.</p>
-        </div>
-        <div class="step">
-          <div class="step__number">
-            <span>3</span>
-          </div>
-          <p class="step__text">dd the egg mixture to the dry mixture and gently mix to combine. Do not overmix.</p>
-        </div>
-        <div class="step">
-          <div class="step__number">
-            <span>4</span>
-          </div>
-          <p class="step__text">Let the batter sit at room temperature for at least 15 minutes and up to 30 minutes
-            before using.</p>
-        </div>
-        <div class="step">
-          <div class="step__number">
-            <span>5</span>
-          </div>
-          <p class="step__text">Heat a cast iron or nonstick griddle pan over medium heat and brush with melted butter.
-            Once the butter begins to sizzle, use 2 tablespoons of the batter for each pancake and cook until the
-            bubbles appear on the surface and the bottom is golden brown, about 2 minutes, flip over and cook until the
-            bottom is golden brown, 1 to 2 minutes longer.</p>
-        </div>
-        <div class="step">
-          <div class="step__number">
-            <span>6</span>
-          </div>
-          <p class="step__text">Transfer the pancakes to a platter and keep warm in a 200 degree F oven.</p>
-        </div>
-        <div class="step">
-          <div class="step__number">
-            <span>7</span>
-          </div>
-          <p class="step__text">Serve 6 pancakes per person, top each with some of the bourbon butter.</p>
-        </div>
-        <div class="step">
-          <div class="step__number">
-            <span>8</span>
-          </div>
-          <p class="step__text">Drizzle with warm maple syrup and dust with confectioners' sugar.</p>
-        </div>
-        <div class="step">
-          <div class="step__number">
-            <span>9</span>
-          </div>
-          <p class="step__text">Garnish with fresh mint sprigs and more toasted pecans, if desired.</p>
-        </div>
-      </div>
+      </div> -->
     </section>
 
 
     <!-- Similar recipes -->
     <section class="similar">
-      <div class="similar__title">
+      <!-- <div class="similar__title">
         <h4>You might like also</h4>
       </div>
       <div class="similar__recipe">
@@ -301,7 +225,7 @@
           <h2 class="similar__info-title">Pasta with Garlic, Scallions, Cauliflower & Breadcrumbs</h2>
         </div>
       </div>
-      <div class="similar__recipe">
+      <!--<div class="similar__recipe">
         <div class="similar__img">
           <img src="src/img/demo-recipe.jpg" alt="demo recipe">
         </div>
@@ -324,17 +248,17 @@
         <div class="similar__info">
           <h2 class="similar__info-title">Pasta with Garlic, Scallions, Cauliflower & Breadcrumbs</h2>
         </div>
-      </div>
+      </div> -->
     </section>
 
 
     <!-- Recipe Origin -->
-    <section class="origin">
-      <h2 class="origin__title">check the link below for more details</h2>
-      <a href="#" class="origin__link">
+    <section class="source">
+      <!-- <h2 class="source__title">check the link below for more details</h2>
+      <a href="#" class="source__link">
         <span>Go To Website</span>
         &rarr;
-      </a>
+      </a> -->
     </section>
 
 
@@ -370,6 +294,14 @@
     </footer>
 
   </div>
+
+  <script>
+    window.addEventListener('load', function () {
+      document.body.style.overflowY = 'scroll'
+      document.querySelector('.preload').style.display = 'none'
+      document.querySelector('.container').style.display = 'block'
+    })
+  </script>
 </body>
 
 </html>

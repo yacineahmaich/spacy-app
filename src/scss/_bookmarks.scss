@@ -2,7 +2,7 @@
   position: absolute;
   right: 0;
   top: 100%;
-  width: 30rem;
+  width: 32rem;
 
   background-color: #fff;
   display: flex;
@@ -20,7 +20,7 @@
   display: flex;
   align-items: center;
   width: 100%;
-  padding: 1rem 3rem;
+  padding: 1.5rem 3rem;
   gap: 1rem;
   background-color: #fff;
   cursor: pointer;
@@ -28,7 +28,7 @@
 
   &:hover {
     background-color: $color-primary;
-    padding: 1rem 2rem;
+    padding: 1.5rem 2rem;
   }
   &:hover &__btn {
     opacity: 1;
@@ -49,6 +49,7 @@
   &__title {
     flex: 1;
     font-weight: 400;
+    font-size: 1.2rem;
     overflow: hidden;
     display: -webkit-box;
     -webkit-line-clamp: 2; /* number of lines to show */

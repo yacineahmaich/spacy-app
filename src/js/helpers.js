@@ -26,3 +26,10 @@ export const getJSON = async function (url) {
     throw err;
   }
 };
+
+export const getRecipeId = function () {
+  const params = new Proxy(new URLSearchParams(window.location.search), {
+    get: (searchParams, prop) => searchParams.get(prop),
+  });
+  return params.recipe_id;
+};

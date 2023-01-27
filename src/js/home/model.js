@@ -1,5 +1,5 @@
-import { API_KEY, API_URL, REC_PER_PAGE } from './config';
-import { getJSON } from './helpers';
+import { API_KEY, API_URL, REC_PER_PAGE } from '../config';
+import { getJSON } from '../helpers';
 
 export const state = {
   recipes: [],
