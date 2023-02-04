@@ -82,6 +82,11 @@
   width: 100%;
   text-align: center;
 
+  &--bookmarks &__icon {
+    width: 5rem !important;
+    height: 5rem !important;
+  }
+
   &__icon {
     width: 7rem;
     height: 7rem;
@@ -137,6 +142,10 @@
       padding: 0 0 2rem 5rem;
       border-bottom: 2px solid $color-primary;
 
+      @media (max-width: 600px) {
+        padding: 0 0 2rem 2rem !important;
+      }
+
       &::after {
         content: '';
         position: absolute;
@@ -164,7 +173,7 @@
     padding: 3rem 10rem;
 
     @media (max-width: 600px) {
-      padding: 5rem !important;
+      padding: 5rem 4rem !important;
     }
   }
 }

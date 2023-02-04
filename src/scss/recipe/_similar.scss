@@ -8,6 +8,7 @@
   background-color: #fff;
 
   @media (max-width: 600px) {
+    padding: 3rem 3rem !important;
     &__recipe {
       flex-direction: column !important;
     }

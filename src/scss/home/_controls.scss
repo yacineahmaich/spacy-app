@@ -6,6 +6,10 @@
   align-items: center;
   margin-bottom: $mb-3;
 
+  @media (max-width: 600px) {
+    padding: 1rem 3rem !important;
+  }
+
   &__founded {
     display: flex;
     align-items: center;

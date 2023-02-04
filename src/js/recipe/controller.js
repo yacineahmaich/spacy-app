@@ -20,7 +20,7 @@ if (module.hot) {
 const RecipeController = async function (id) {
   try {
     const { bookmarks } = model.state;
-    BookmarksView.render({ bookmarks, current: model.state.recipe.id });
+    BookmarksView.renderSpinner();
 
     await model.getRecipe(id);
     const {
@@ -33,6 +33,8 @@ const RecipeController = async function (id) {
       steps,
       source,
     } = model.state.recipe;
+
+    BookmarksView.render({ bookmarks, current: model.state.recipe.id });
 
     TitleView.render(title);
     document.title = `Spacy | ${title}`;

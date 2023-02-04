@@ -5,7 +5,7 @@
   margin-bottom: $mb-3;
 
   @media (max-width: 600px) {
-    padding: 0 2rem;
+    padding: 0 2rem !important;
 
     &__img {
       height: 25rem !important;

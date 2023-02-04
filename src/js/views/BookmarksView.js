@@ -11,6 +11,17 @@ class BookmarksView {
     this.#parentElement.insertAdjacentHTML('afterbegin', markup);
   }
 
+  renderSpinner() {
+    this._clear();
+    this.#parentElement.innerHTML = `
+    <div class="spinner spinner--bookmarks">
+      <svg class="spinner__icon">
+        <use href="${icons}#icon-loader"></use>
+      </svg>
+    </div>
+    `;
+  }
+
   _clear() {
     this.#parentElement.innerHTML = '';
   }

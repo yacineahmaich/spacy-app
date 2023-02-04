@@ -11,6 +11,7 @@
   flex-wrap: wrap;
 
   @media (max-width: 600px) {
+    padding: 2rem 3rem !important;
     &__copyright {
       order: 3 !important;
       width: 100% !important;
