@@ -15,7 +15,7 @@
 
     &::after,
     &::before {
-      content: "";
+      content: '';
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
@@ -49,6 +49,12 @@
     color: #fff;
     border-radius: 40px;
     font-weight: 400;
+    &:last-child {
+      margin-right: auto;
+    }
     cursor: pointer;
+    @media (max-width: 600px) {
+      font-weight: 300;
+    }
   }
 }

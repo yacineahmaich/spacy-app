@@ -37,6 +37,7 @@
   overflow: hidden;
   cursor: pointer;
   transition: all 0.3s;
+  height: 100%;
 
   // Recipe hover animation
   &:hover &__img img {
