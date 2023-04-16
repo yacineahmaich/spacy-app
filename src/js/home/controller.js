@@ -16,6 +16,7 @@ const getRecipesController = async function () {
     RecipesView.renderSpinner();
     await model.getRecipes();
     RecipesView.render(model.state.recipes);
+    PaginationView.render(model.state.pagination);
   } catch (err) {
     RecipesView.renderFeedback(err.message);
     PaginationView.clear();
@@ -43,7 +44,9 @@ const SearchRecipesController = async function (query) {
     // close the modal
     ModalView.closeModal();
     // clear search input
-    SearchView.clear();
+    // SearchView.clear();
+
+    if (model.state.search.query === query) return;
 
     model.state.search.query = query;
     model.state.pagination.current = 1;

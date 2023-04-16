@@ -19,6 +19,7 @@ class QuickSearchView {
       if (!item) return;
 
       const { tag } = item.dataset;
+      document.querySelector('.search__field').value = tag;
       handler(tag);
     });
   }

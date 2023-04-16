@@ -3,7 +3,7 @@ import { REQ_TIMEOUT_SEC } from './config';
 const timeout = function () {
   return new Promise(function (_, reject) {
     setTimeout(function () {
-      reject(`Request take long time! check your connection`);
+      reject(new Error('Request take long time! check your connection'));
     }, REQ_TIMEOUT_SEC * 1000);
   });
 };

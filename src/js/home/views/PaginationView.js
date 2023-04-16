@@ -5,11 +5,11 @@ class PaginationView {
   #data;
 
   constructor() {
-    document
-      .querySelector('.pagination__go')
-      .addEventListener('click', function () {
-        document.querySelector('.search__field').focus();
-      });
+    // document
+    //   .querySelector('.pagination__go')
+    //   .addEventListener('click', function () {
+    //     document.querySelector('.search__field').focus();
+    //   });
   }
 
   render(data) {

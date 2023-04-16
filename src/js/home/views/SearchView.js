@@ -1,6 +1,19 @@
 class SearchView {
   #parentElement = document.querySelector('.search');
 
+  constructor() {
+    this.#parentElement
+      .querySelector('.search__field')
+      .addEventListener('focus', function () {
+        this.placeholder = 'hints: pasta, tacos, burger...';
+      });
+    this.#parentElement
+      .querySelector('.search__field')
+      .addEventListener('blur', function () {
+        this.placeholder = 'Search over 1.000.000 recipes';
+      });
+  }
+
   clear() {
     this.#parentElement.querySelector('.search__field').value = '';
   }

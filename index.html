@@ -1,40 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- icon -->
+    <link
+      rel="shortcut icon"
+      href="src/img/logo-icon.svg"
+      type="image/x-icon"
+    />
+    <!-- SCSS -->
+    <link rel="stylesheet" href="src/scss/home.scss" />
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- icon -->
-  <link rel="shortcut icon" href="src/img/logo-icon.svg" type="image/x-icon">
-  <!-- SCSS -->
-  <link rel="stylesheet" href="src/scss/home.scss">
+    <!-- JS -->
+    <script type="module" src="src/js/home/controller.js"></script>
 
-  <!-- JS -->
-  <script type="module" src="src/js/home/controller.js"></script>
+    <title>Spacy</title>
+  </head>
 
-  <title>Spacy</title>
-</head>
-
-<body>
-  <div class="container">
-    <!-- Header -->
-    <header class="header">
-      <a href="/index.html" class="header__logo">
-        <img src="src/img/logo.svg" alt="Logo">
-      </a>
-      <nav class="nav">
-        <ul class="nav__list">
-          <li class="nav__item nav__item--bookmarks">
-            <button class="nav__btn nav__btn--bookmarks">
-              <svg class="nav__icon nav__icon--bookmarks">
-                <use href="src/img/icons.svg#icon-bookmark-fill"></use>
-              </svg>
-              <span class="nav__btn-text">bookmarks</span>
-            </button>
-            <!-- Bookmarks -->
-            <ul class="bookmarks">
-              <!-- <li class="bookmark">
+  <body>
+    <div class="container">
+      <!-- Header -->
+      <header class="header">
+        <a href="/index.html" class="header__logo">
+          <img src="src/img/logo.svg" alt="Logo" />
+        </a>
+        <nav class="nav">
+          <ul class="nav__list">
+            <li class="nav__item nav__item--bookmarks">
+              <button class="nav__btn nav__btn--bookmarks">
+                <svg class="nav__icon nav__icon--bookmarks">
+                  <use href="src/img/icons.svg#icon-bookmark-fill"></use>
+                </svg>
+                <span class="nav__btn-text">bookmarks</span>
+              </button>
+              <!-- Bookmarks -->
+              <ul class="bookmarks">
+                <!-- <li class="bookmark">
                 <div class="bookmark__img">
                   <img src="src/img/demo-recipe.jpg" alt="recipe">
                 </div>
@@ -45,184 +48,178 @@
                   </svg>
                 </button>
               </li> -->
-            </ul>
-          </li>
-        </ul>
-      </nav>
-    </header>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </header>
 
+      <!-- Sub Header -->
+      <div class="sub-header">
+        <form action="#" id="search" class="search">
+          <input
+            type="text"
+            class="search__field"
+            placeholder="Search over 1.000.000 recipes"
+          />
+          <button type="submit" class="btn search__btn search__btn--search">
+            <svg class="icon--small search__btn-icon">
+              <use href="src/img/icons.svg#icon-search"></use>
+            </svg>
+            <span class="search__btn-text">search</span>
+          </button>
+        </form>
 
-
-    <!-- Sub Header -->
-    <div class="sub-header">
-      <form action="#" id="search" class="search">
-        <input type="text" class="search__field" placeholder="Search over 1.000.000 recipes">
-        <button type="submit" class="btn search__btn search__btn--search">
-          <svg class="icon--small search__btn-icon">
-            <use href="src/img/icons.svg#icon-search"></use>
+        <div class="quick-search">
+          <svg class="icon--small quick-search__icon">
+            <use href="src/img/icons.svg#icon-light"></use>
           </svg>
-          <span class="search__btn-text">search</span>
-        </button>
-      </form>
+          <button class="quick-search__btn">quick search</button>
+        </div>
 
-      <div class="quick-search">
-        <svg class="icon--small quick-search__icon">
-          <use href="src/img/icons.svg#icon-light"></use>
-        </svg>
-        <button class="quick-search__btn">quick search</button>
+        <!-- Modal -->
+        <div class="modal hidden">
+          <div class="overlay"></div>
+          <div class="popup">
+            <button class="popup__btn popup__btn--close">
+              <svg class="icon--small">
+                <use href="src/img/icons.svg#icon-close"></use>
+              </svg>
+            </button>
+            <div class="search-menu">
+              <h2 class="search-menu__title">Search for your wish</h2>
+
+              <ul class="search-menu__items">
+                <li class="search-menu__item" data-tag="pizza">
+                  <span>pizza</span>
+                </li>
+                <li class="search-menu__item" data-tag="beef stroganoff">
+                  <span>beef stroganoff</span>
+                </li>
+                <li class="search-menu__item" data-tag="sandwich">
+                  <span>sandwich</span>
+                </li>
+                <li class="search-menu__item" data-tag="waldorf salad">
+                  <span>waldorf salad</span>
+                </li>
+                <li class="search-menu__item" data-tag="caesar salad">
+                  <span>caesar salad</span>
+                </li>
+                <li class="search-menu__item" data-tag="french fries">
+                  <span>french fries</span>
+                </li>
+                <li class="search-menu__item" data-tag="tacos">
+                  <span>tacos</span>
+                </li>
+                <li class="search-menu__item" data-tag="humberger">
+                  <span>humberger</span>
+                </li>
+                <li class="search-menu__item" data-tag="cake">
+                  <span>cake</span>
+                </li>
+                <li class="search-menu__item" data-tag="donuts">
+                  <span>donuts</span>
+                </li>
+                <li class="search-menu__item" data-tag="ice cream">
+                  <span>ice cream</span>
+                </li>
+                <li class="search-menu__item" data-tag="potato chips">
+                  <span>potato chips</span>
+                </li>
+                <li class="search-menu__item" data-tag="chocolate">
+                  <span>chocolate</span>
+                </li>
+                <li class="search-menu__item" data-tag="pasta">
+                  <span>pasta</span>
+                </li>
+                <li class="search-menu__item" data-tag="bread">
+                  <span>bread</span>
+                </li>
+                <li class="search-menu__item" data-tag="pancake">
+                  <span>pancake</span>
+                </li>
+                <li class="search-menu__item" data-tag="apple pie">
+                  <span>apple pie</span>
+                </li>
+                <li class="search-menu__item" data-tag="fried rice">
+                  <span>fried rice</span>
+                </li>
+                <li class="search-menu__item" data-tag="bagel">
+                  <span>bagel</span>
+                </li>
+                <li class="search-menu__item" data-tag="muffins">
+                  <span>muffins</span>
+                </li>
+                <li class="search-menu__item" data-tag="iron">
+                  <span>iron</span>
+                </li>
+                <li class="search-menu__item" data-tag="cheese">
+                  <span>cheese</span>
+                </li>
+                <li class="search-menu__item" data-tag="salsa">
+                  <span>salsa</span>
+                </li>
+                <li class="search-menu__item" data-tag="chicken tenders">
+                  <span>chicken tenders</span>
+                </li>
+                <li class="search-menu__item" data-tag="ribs">
+                  <span>ribs</span>
+                </li>
+                <li class="search-menu__item" data-tag="grilled chicken">
+                  <span>grilled chicken</span>
+                </li>
+                <li class="search-menu__item" data-tag="bacon">
+                  <span>bacon</span>
+                </li>
+                <li class="search-menu__item" data-tag="sausage">
+                  <span>sausage</span>
+                </li>
+                <li class="search-menu__item" data-tag="stuffing">
+                  <span>stuffing</span>
+                </li>
+                <li class="search-menu__item" data-tag="brownies">
+                  <span>brownies</span>
+                </li>
+                <li class="search-menu__item" data-tag="turkey">
+                  <span>turkey</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!--- /popup --->
+        </div>
+        <!--- /modal --->
       </div>
 
-      <!-- Modal -->
-      <div class="modal hidden">
-        <div class="overlay"></div>
-        <div class="popup">
-          <button class="popup__btn popup__btn--close">
-            <svg class="icon--small">
-              <use href="src/img/icons.svg#icon-close">
-              </use>
-            </svg>
-          </button>
-          <div class="search-menu">
-            <h2 class="search-menu__title">Search for your wish</h2>
-
-            <ul class="search-menu__items">
-
-              <li class="search-menu__item" data-tag="pizza">
-                <span>pizza</span>
-              </li>
-              <li class="search-menu__item" data-tag="beef stroganoff">
-                <span>beef stroganoff</span>
-              </li>
-              <li class="search-menu__item" data-tag="sandwich">
-                <span>sandwich</span>
-              </li>
-              <li class="search-menu__item" data-tag="waldorf salad">
-                <span>waldorf salad</span>
-              </li>
-              <li class="search-menu__item" data-tag="caesar salad">
-                <span>caesar salad</span>
-              </li>
-              <li class="search-menu__item" data-tag="french fries">
-                <span>french fries</span>
-              </li>
-              <li class="search-menu__item" data-tag="tacos">
-                <span>tacos</span>
-              </li>
-              <li class="search-menu__item" data-tag="humberger">
-                <span>humberger</span>
-              </li>
-              <li class="search-menu__item" data-tag="cake">
-                <span>cake</span>
-              </li>
-              <li class="search-menu__item" data-tag="donuts">
-                <span>donuts</span>
-              </li>
-              <li class="search-menu__item" data-tag="ice cream">
-                <span>ice cream</span>
-              </li>
-              <li class="search-menu__item" data-tag="potato chips">
-                <span>potato chips</span>
-              </li>
-              <li class="search-menu__item" data-tag="chocolate">
-                <span>chocolate</span>
-              </li>
-              <li class="search-menu__item" data-tag="pasta">
-                <span>pasta</span>
-              </li>
-              <li class="search-menu__item" data-tag="bread">
-                <span>bread</span>
-              </li>
-              <li class="search-menu__item" data-tag="pancake">
-                <span>pancake</span>
-              </li>
-              <li class="search-menu__item" data-tag="apple pie">
-                <span>apple pie</span>
-              </li>
-              <li class="search-menu__item" data-tag="fried rice">
-                <span>fried rice</span>
-              </li>
-              <li class="search-menu__item" data-tag="bagel">
-                <span>bagel</span>
-              </li>
-              <li class="search-menu__item" data-tag="muffins">
-                <span>muffins</span>
-              </li>
-              <li class="search-menu__item" data-tag="iron">
-                <span>iron</span>
-              </li>
-              <li class="search-menu__item" data-tag="cheese">
-                <span>cheese</span>
-              </li>
-              <li class="search-menu__item" data-tag="salsa">
-                <span>salsa</span>
-              </li>
-              <li class="search-menu__item" data-tag="chicken tenders">
-                <span>chicken tenders</span>
-              </li>
-              <li class="search-menu__item" data-tag="ribs">
-                <span>ribs</span>
-              </li>
-              <li class="search-menu__item" data-tag="grilled chicken">
-                <span>grilled chicken</span>
-              </li>
-              <li class="search-menu__item" data-tag="bacon">
-                <span>bacon</span>
-              </li>
-              <li class="search-menu__item" data-tag="sausage">
-                <span>sausage</span>
-              </li>
-              <li class="search-menu__item" data-tag="stuffing">
-                <span>stuffing</span>
-              </li>
-              <li class="search-menu__item" data-tag="brownies">
-                <span>brownies</span>
-              </li>
-              <li class="search-menu__item" data-tag="turkey">
-                <span>turkey</span>
-              </li>
-
-            </ul>
-
-          </div>
-        </div> <!--- /popup --->
-      </div><!--- /modal --->
-    </div>
-
-
-
-    <!-- Controlls -->
-    <div class="controls">
-      <!-- <div class="controls__founded">
+      <!-- Controlls -->
+      <div class="controls">
+        <!-- <div class="controls__founded">
         <div class="controls__founded-dot"></div>
         <span class="controls__founded--value">98</span>
         Recipes founded
       </div> -->
 
-      <div class="controls__founded">
-        <div class="controls__founded-dot"></div>
-        <span class="controls__founded--value"></span>
-        Recommanded For You
+        <div class="controls__founded">
+          <div class="controls__founded-dot"></div>
+          <span class="controls__founded--value"></span>
+          Recommanded For You
+        </div>
       </div>
-    </div>
 
-
-    <!-- Recipes -->
-    <div class="recipes-wrapper">
-      <div class="recipes">
-
-        <!-- <div class="spinner">
+      <!-- Recipes -->
+      <div class="recipes-wrapper">
+        <div class="recipes">
+          <!-- <div class="spinner">
           <svg class="spinner__icon">
             <use href="src/img/icons.svg#icon-loader"></use>
           </svg>
         </div> -->
 
-
-        <!-- <div class="feedback">
+          <!-- <div class="feedback">
           <p>No results matching "pasta" ! Please try again 🚨</p>
         </div> -->
 
-
-        <!-- <div class="recipe">
+          <!-- <div class="recipe">
           <div class="recipe__img">
             <img src="src/img/demo-recipe.jpg" alt="demo recipe">
           </div>
@@ -231,16 +228,12 @@
             <p class="recipe__info-author">Foodista</p>
           </div>
         </div> -->
-
-
+        </div>
       </div>
 
-    </div>
-
-
-    <!-- Pagination -->
-    <div class="pagination">
-      <!-- <button class="pagination__btn pagination__btn--prev pagination__btn--disabled">
+      <!-- Pagination -->
+      <div class="pagination">
+        <!-- <button class="pagination__btn pagination__btn--prev pagination__btn--disabled">
         <svg class="icon--small">
           <use href="src/img/icons.svg#icon-arrow-left"></use>
         </svg>
@@ -257,47 +250,53 @@
           <use href="src/img/icons.svg#icon-arrow-right"></use>
         </svg>
       </button> -->
-      <p class="pagination__message">Go to search area for more recipes <button class="pagination__go">GO</button></p>
+        <!-- <p class="pagination__message">Go to search area for more recipes <button class="pagination__go">GO</button></p> -->
+      </div>
+
+      <!-- Footer -->
+      <footer class="footer">
+        <img src="src/img/logo-icon.svg" alt="Logo" class="footer__logo" />
+
+        <p class="footer__copyright">
+          © Copyright by <strong>Spacy Food</strong> all rights reserved
+        </p>
+
+        <ul class="footer__links">
+          <li class="footer__links-item">
+            <a
+              href="https://github.com/yacineahmaich"
+              target="
+          "
+            >
+              <svg class="icon--medium">
+                <use href="src/img/icons.svg#icon-twitter"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="footer__links-item">
+            <a
+              href="https://github.com/yacineahmaich"
+              target="
+          "
+            >
+              <svg class="icon--medium">
+                <use href="src/img/icons.svg#icon-instagram"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="footer__links-item">
+            <a
+              href="https://github.com/yacineahmaich"
+              target="
+          "
+            >
+              <svg class="icon--medium">
+                <use href="src/img/icons.svg#icon-github"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </footer>
     </div>
-
-
-    <!-- Footer -->
-    <footer class="footer">
-      <img src="src/img/logo-icon.svg" alt="Logo" class="footer__logo">
-
-      <p class="footer__copyright">© Copyright by <strong>Spacy Food</strong> all rights reserved</p>
-
-      <ul class="footer__links">
-        <li class="footer__links-item">
-          <a href="https://github.com/yacineahmaich" target="
-          ">
-            <svg class="icon--medium">
-              <use href="src/img/icons.svg#icon-twitter"></use>
-            </svg>
-          </a>
-        </li>
-        <li class="footer__links-item">
-          <a href="https://github.com/yacineahmaich" target="
-          ">
-            <svg class="icon--medium">
-              <use href="src/img/icons.svg#icon-instagram"></use>
-            </svg>
-          </a>
-        </li>
-        <li class="footer__links-item">
-          <a href="https://github.com/yacineahmaich" target="
-          ">
-            <svg class="icon--medium">
-              <use href="src/img/icons.svg#icon-github"></use>
-            </svg>
-          </a>
-        </li>
-      </ul>
-    </footer>
-  </div>
-
-
-
-</body>
-
+  </body>
 </html>

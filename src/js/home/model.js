@@ -16,10 +16,11 @@ export const state = {
 
 export const getRecipes = async function () {
   try {
-    const url = `${API_URL}complexSearch?apiKey=${API_KEY}&addRecipeInformation=true&sort=random`;
+    const url = `${API_URL}complexSearch?apiKey=${API_KEY}&addRecipeInformation=true`;
 
     const data = await getJSON(url);
     state.recipes = data.results;
+    state.pagination.num_pages = 49;
   } catch (err) {
     throw err;
   }
