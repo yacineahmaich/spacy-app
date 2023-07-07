@@ -1,4 +1,4 @@
-# Spacy
+# [Spacy](https://spacy-app.netlify.app/)
 
 This is a sample recipes website built with vanilla JavaScript using OOP paradigm and SCSS, following the MVC pattern.
 
