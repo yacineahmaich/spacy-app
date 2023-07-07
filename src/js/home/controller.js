@@ -7,6 +7,7 @@ import SearchView from './views/SearchView';
 import FoundedRecipesView from './views/FoundedRecipesView';
 import BookmarksView from '../views/BookmarksView';
 
+// Parcel HMR
 if (module.hot) {
   module.hot.accept();
 }
@@ -31,6 +32,7 @@ const paginationController = async function (goto) {
     PaginationView.disablePagination();
     window.scrollTo({ left: 0, top: 0 });
     await model.getSearchResults();
+    await model.getRecipes();
     RecipesView.render(model.state.recipes);
     PaginationView.enablePagination();
   } catch (err) {
@@ -43,8 +45,6 @@ const SearchRecipesController = async function (query) {
   try {
     // close the modal
     ModalView.closeModal();
-    // clear search input
-    // SearchView.clear();
 
     if (model.state.search.query === query) return;
 

@@ -1,4 +1,9 @@
-import { API_KEY, API_URL, REC_PER_PAGE } from '../config';
+import {
+  API_KEY,
+  API_URL,
+  RECOMMANDED_RECIPES_PAGES,
+  REC_PER_PAGE,
+} from '../config';
 import { getJSON } from '../helpers';
 
 export const state = {
@@ -16,11 +21,13 @@ export const state = {
 
 export const getRecipes = async function () {
   try {
+    if (state.search.query) return;
+
     const url = `${API_URL}complexSearch?apiKey=${API_KEY}&addRecipeInformation=true`;
 
     const data = await getJSON(url);
     state.recipes = data.results;
-    state.pagination.num_pages = 49;
+    state.pagination.num_pages = RECOMMANDED_RECIPES_PAGES;
   } catch (err) {
     throw err;
   }
@@ -28,6 +35,8 @@ export const getRecipes = async function () {
 
 export const getSearchResults = async function () {
   try {
+    if (!state.search.query) return;
+
     const offset = (state.pagination.current - 1) * REC_PER_PAGE;
     const url = `${API_URL}complexSearch/?apiKey=${API_KEY}&addRecipeInformation=true&offset=${offset}&query=${state.search.query}`;
 
